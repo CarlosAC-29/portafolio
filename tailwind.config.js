@@ -5,6 +5,12 @@ module.exports = {
     "./components/**/*.{js,ts,jsx,tsx}"
   ],
   theme: {
+    extend: {},
+
+    fontFamily: {
+        myFont: ["Yantramanav"]
+    },
+
     screens: {
       'xs': '320px',
       // => @media (min-width: 640px) { ... }
@@ -24,7 +30,6 @@ module.exports = {
       '2xl': '1536px',
       // => @media (min-width: 1536px) { ... }
     },
-    extend: {},
   },
   plugins: [],
 }

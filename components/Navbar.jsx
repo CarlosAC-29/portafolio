@@ -12,21 +12,21 @@ export default function Navbar() {
     }
 
     return (
-        <div className='fixed w-full h-20 shadow-xl z-[100]'>
+        <div className='fixed w-full h-20 shadow-xl z-[1000]'>
             <div className='flex xs:justify-end sm:justify-end md:justify-center items-center w-full h-full px-2 2xl:px-16'>
                 <div>
-                    <ul className='hidden md:flex'>
+                    <ul className='font-myFont font-bold hidden md:flex gap-20'>
                         <Link href='/'>
-                            <li className='ml-10 text-sm uppercase hover:border-b'>Home</li>
+                            <li className='ml-10 text-base uppercase hover:border-b'>Home</li>
                         </Link>
                         <Link href='/'>
-                            <li className='ml-10 text-sm uppercase hover:border-b'>About</li>
+                            <li className='ml-10 text-base uppercase hover:border-b'>About</li>
                         </Link>
                         <Link href='/'>
-                            <li className='ml-10 text-sm uppercase hover:border-b'>Proyects</li>
+                            <li className='ml-10 text-base uppercase hover:border-b'>Proyects</li>
                         </Link>
                         <Link href='/'>
-                            <li className='ml-10 text-sm uppercase hover:border-b'>Contact</li>
+                            <li className='ml-10 text-base uppercase hover:border-b'>Contact</li>
                         </Link>
                     </ul>
                     <div onClick={ handNav } className='md:hidden'>
