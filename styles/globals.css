@@ -1,39 +1,41 @@
-@import url('https://fonts.googleapis.com/css2?family=Alumni+Sans+Collegiate+One:ital@0;1&family=Alumni+Sans:wght@900&family=Poppins:wght@300;400;600&family=Yantramanav:wght@300&display=swap');
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-@layrt base {
 
-  html {
-    @apply font-myFont
-  }
 
+html {
+  scroll-behavior: smooth;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+@layer base {
+  
   body {
     @apply bg-[#ecf0f3] text-[#1f2937] tracking-wide font-myFont
   }
 
-  h1, h2, h3, h4, h5, h6, a, p {
+  p {
     @apply font-myFont
   }
 
   h1, h2, h3, h4, h5, h6 {
-    @apply font-bold
+    @apply font-bold font-myFont
   }
 
   h1 {
-    @apply text-4xl sm:text-5xl md:text-6xl
+    @apply text-4xl sm:text-5xl md:text-6xl font-myFont
   }
 
   h2 {
     @apply text-3xl sm:text-4xl
-  } 
-
+  }
+  
   li {
     @apply cursor-pointer
   }
 
   button {
-    @apply shadow-xl shadow-gray-400 rounded-xl uppercase bg-gradient-to-r from-[#5651e5] to-[#709dff] text-white
+    @apply shadow-xl shadow-gray-400 rounded-xl uppercase bg-gradient-to-r from-[#09B594] to-[#089C7E] text-white
   }
 }

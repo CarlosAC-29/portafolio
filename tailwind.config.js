@@ -8,7 +8,7 @@ module.exports = {
     extend: {},
 
     fontFamily: {
-        myFont: ["Yantramanav"]
+        myFont: "'Nunito', sans-serif"
     },
 
     screens: {
