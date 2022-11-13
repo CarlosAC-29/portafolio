@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import Image from 'next/image';
-import ContactImage from '../public/images/Contact.jpg';
+import ContactImage from '../public/images/contact.jpg';
 import { AiOutlineMail } from 'react-icons/ai';
 import { HiOutlineChevronDoubleUp } from 'react-icons/hi';
 import { MdOutlineContactPhone } from 'react-icons/md';
