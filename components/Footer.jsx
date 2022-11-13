@@ -12,11 +12,17 @@ export default function Footer() {
                 <div>
                     <p className='text-[#09B594] pb-1 text-[1.2rem]'>Socials</p>
                     <div className='flex gap-10 justify-center'>
+
                         <Link href='https://www.linkedin.com/in/carlos-c%C3%A1ceres-836596137/'>
-                            <FaLinkedinIn size={30} color={'#fff'} className='cursor-pointer' />
+                            <a>
+                                <FaLinkedinIn size={30} color={'#fff'} className='cursor-pointer' />
+                            </a>
                         </Link>
+
                         <Link href='https://github.com/CarlosAC-29'>
-                            <FaGithub size={30} color={'#fff'} className='cursor-pointer' />
+                            <a>
+                                <FaGithub size={30} color={'#fff'} className='cursor-pointer' />
+                            </a>
                         </Link>
                     </div>
                 </div>
@@ -30,7 +36,7 @@ export default function Footer() {
                 <div>
                     <p className='text-[#09B594] pb-1 text-[1.2rem]'>Nationality</p>
                     <div className='flex justify-center gap-2'>
-                        <Image src={colombia} alt='colombia image'/>
+                        <Image src={colombia} alt='colombia image' />
                         <p className='text-white'>Colombian</p>
                     </div>
                 </div>

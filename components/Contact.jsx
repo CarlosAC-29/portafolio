@@ -9,34 +9,7 @@ import emailjs from '@emailjs/browser';
 
 
 export default function Contact() {
-    const initialValues = {name: "", number:'', subject:'', message:''}
-    const [formValues, setFormValues] = useState(initialValues);
-    const [error, setError] = useState({});
-    const [isSubmit, setIsSubmit] = useState(false);
 
-    const validate = (values) => {
-        const errors = {};
-        if (!values.name) {
-            errors.name = "username is required"
-        }
-    }
-
-    const handleChange = (e) => {
-        const { id, value } = e.target;
-        setFormValues({ ...formValues, [id]: value });
-      };
-
-    const handleSubmit = (e) => {
-        e.preventDefault();
-        setError(validate(formValues));
-        setIsSubmit(true);
-    }
-
-    useEffect(() => {
-        if(Object.keys(error).length === 0 && isSubmit){
-            console.log(formValues);
-        }
-    }, [error])
 
 
 
@@ -82,7 +55,7 @@ export default function Contact() {
                             <form onSubmit={sendEmail}>
                                 <div className='grid md:grid-cols-2 gap-4 w-full py-2 '>
                                     <div className='flex flex-col'>
-                                        <label for="success" className='font-myFont font-bold text-sm py-2 text-[#002336]'>Name</label>
+                                        <label className='font-myFont font-bold text-sm py-2 text-[#002336]'>Name</label>
                                         <input 
                                         className='border-2 rounded-lg p-3 flex border-gray-300' type='text' name='user_name' 
                                         required
