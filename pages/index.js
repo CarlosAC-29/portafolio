@@ -5,8 +5,15 @@ import Skills from '../components/Skills'
 import Proyects from '../components/Projects'
 import Contact from '../components/Contact'
 import PageFooter from '../components/Footer'
+import Modal from '../components/Modal'
+import { useState } from 'react'
 
 export default function Home() {
+
+  function modalVisible (props){
+    return props;
+  }
+
   return (
     <div>
       <Head>
