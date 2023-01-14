@@ -6,88 +6,58 @@ import { HiOutlineChevronDoubleUp } from 'react-icons/hi';
 import { MdOutlineContactPhone } from 'react-icons/md';
 import Link from 'next/link';
 import emailjs from '@emailjs/browser';
-import Modal from '../components/Modal'
-import { data } from 'autoprefixer';
+import { useFormik } from 'formik';
+import { basicSchema } from '../schemas';
+import Swal from 'sweetalert2'
 
 
 export default function Contact(props) {
 
-    const [showModal, setShowModal] = useState(false);
-    const [isError, setIsError] = useState(0);
-    const [statName, setStatName] = useState(0);
-    const [nameField, setNameField] = useState('');
-    const [statNumber, setStatNumber] = useState(0);
-    const [numberField, setNumberField] = useState('');
-    const [statEmail, setStatEmail] = useState(0);
-    const [emailField, setEmailField] = useState('');
-    const [statMessage, setStatMessage] = useState(0);
-    const [messageField, setMessageField] = useState('');
+    const [verified, setVerified] = useState(false)
 
+    useEffect(() => {
+        formSubmitted(verified)
+    }, [verified])
 
-    const validation = (name, number, email, message) => {
-        if (!name) {
-            setStatName(1)
-        } else {
-            setStatName(0)
-        }
-
-        if (!number) {
-            setStatNumber(1)
-        } else {
-            setStatNumber(0)
-        }
-
-        if (!email) {
-            setStatEmail(1)
-        } else {
-            setStatEmail(0)
-        }
-
-        if (!message) {
-            setStatMessage(1)
-        } else {
-            setStatMessage(0)
-        }
-
-        if(!(statName) && !(statNumber) && !(statEmail) && !(statMessage)){
-            setIsError(0)
-        }else{
-            setIsError(1)
-        }
-
-
+    const onSubmit = async (values, actions) => {
+        setVerified(true)
+        console.log(verified)
+        console.log(values)
+        console.log(actions)
+        //EmailJs Section
+        emailjs.send('service_ifianwe', 'template_p48t27s', values, 'JuTCPJD8FaqSMXMVo').then(() => { console.log('email sent'); });
+        await new Promise((resolve) => setTimeout(resolve, 1000))
+        actions.resetForm()
     }
 
-    // const [data, setData] = useState({
-    //     name: '', nameValido: false,
-    //     number: '', numberValido: false,
-    //     email: '', emailValido: false,
-    //     message: '', messageValido: false,
-    // });
+    const formik = useFormik({
+        initialValues: {
+            name: '',
+            number: '',
+            email: '',
+            message: ''
+        },
+        validationSchema: basicSchema,
+        onSubmit,
 
+    })
 
-    const handleSubmit = (e) => {
-        e.preventDefault();
-        validation(nameField, numberField, emailField, messageField);
-        if(isError == 0){
-            sendEmail(e);
+    const formSubmitted = () => {
+        console.log(verified)
+        if (verified == true) {
+            Swal.fire({
+                text: "I'll be in touch with you as soon as posible 👍",
+                icon: 'success',
+                iconColor: '#09B594',
+                confirmButtonColor: '#09B594',
+                confirmButtonText: 'ok'
+              })
+              
         }
+        setVerified(false)
     }
 
-    const handleChange = (e) => {
-        e.preventDefault();
-        setData({
-            ...data,
-            [e.target.name]: e.target.value,
-        })
 
-    }
-
-    const sendEmail = (event) => {
-        event.preventDefault();
-        emailjs.sendForm('service_ifianwe', 'template_p48t27s', event.target, 'JuTCPJD8FaqSMXMVo')
-            .then(response => console.log(response)).catch(error => console.log(error));
-    }
 
     return (
         <div id='contact' className='w-full lg:h-full'>
@@ -122,59 +92,79 @@ export default function Contact(props) {
                     <div className='col-span-3 w-full h-auto shadow-xl shadow-gray-400 rounded-xl lg:p-4 bg-[#d0d3d5]'>
                         <div className='p-4'>
 
-                            <form onSubmit={handleSubmit}>
+                            <form onSubmit={formik.handleSubmit} >
                                 <div className='grid md:grid-cols-2 gap-4 w-full py-2 '>
                                     <div className='flex flex-col'>
-                                        {statName == 1 ?
-                                            <label className='uppercase font-myFont font-bold text-sm py-2 text-red-600'>Name - Campo vacio</label>
-                                            :
-                                            <label className='uppercase font-myFont font-bold text-sm py-2 text-[#002336]'>Name</label>
-                                        }
+                                        <label
+                                            className='uppercase font-myFont font-bold text-sm py-2 text-[#002336]'>name</label>
                                         <input
-                                            className='border-2 rounded-lg p-3 flex border-gray-300' type='text' name='name'
-                                            onChange={e => setNameField(e.target.value)}
-                                            value={nameField}
+                                            className={formik.errors.name && formik.touched.name ? 'border-2 rounded-lg p-3 flex border-red-600' : 'border-2 rounded-lg p-3 flex border-gray-300'}
+                                            type='text'
+                                            id='name'
+                                            value={formik.values.name}
+                                            onChange={formik.handleChange}
+                                            onBlur={formik.handleBlur}
                                         />
+                                        {formik.errors.name && formik.touched.name &&
+                                            <p className='text-red-600 text-sm'>
+                                                {formik.errors.name}
+                                            </p>}
                                     </div>
                                     <div className='flex flex-col'>
-                                        {statNumber == 1 ?
-                                            <label className='uppercase font-myFont font-bold text-sm py-2 text-red-600'>Number - Campo vacio</label>
-                                            :
-                                            <label className='uppercase font-myFont font-bold text-sm py-2 text-[#002336]'>Number</label>
-                                        }
+                                        <label className='uppercase font-myFont font-bold text-sm py-2 text-[#002336]'>number</label>
                                         <input
-                                            className='border-2 rounded-lg p-3 flex border-gray-300' type='text' name='number'
-                                            onChange={e => setNumberField(e.target.value)}
-                                            value={numberField}
+                                            className={formik.errors.number && formik.touched.number ? 'border-2 rounded-lg p-3 flex border-red-600' : 'border-2 rounded-lg p-3 flex border-gray-300'}
+                                            maxlength='10'
+                                            type='text'
+                                            name='number'
+                                            value={formik.values.number}
+                                            onChange={formik.handleChange}
+                                            onBlur={formik.handleBlur}
+
                                         />
+                                        {formik.errors.number && formik.touched.number &&
+                                            <p className='text-red-600 text-sm'>
+                                                {formik.errors.number}
+                                            </p>}
                                     </div>
                                 </div>
                                 <div className='flex flex-col py-2'>
-                                    {statEmail == 1 ?
-                                        <label className='uppercase font-myFont font-bold text-sm py-2 text-red-600'>Email - Campo vacio</label>
-                                        :
-                                        <label className='uppercase font-myFont font-bold text-sm py-2 text-[#002336]'>Email</label>
-                                    }
+                                    <label className='uppercase font-myFont font-bold text-sm py-2 text-[#002336]'>email</label>
                                     <input
-                                        className='border-2 rounded-lg p-3 flex border-gray-300' type='email' name='email'
-                                        onChange={e => setEmailField(e.target.value)}
-                                        value={emailField}
+                                        className={formik.errors.email && formik.touched.email ? 'border-2 rounded-lg p-3 flex border-red-600' : 'border-2 rounded-lg p-3 flex border-gray-300'}
+                                        type='text'
+                                        name='email'
+                                        value={formik.values.email}
+                                        onChange={formik.handleChange}
+                                        onBlur={formik.handleBlur}
                                     />
+                                    {formik.errors.email && formik.touched.email &&
+                                        <p className='text-red-600 text-sm'>
+                                            {formik.errors.email}
+                                        </p>}
                                 </div>
                                 <div className='flex flex-col py-2'>
-                                    {statMessage == 1 ?
-                                        <label className='uppercase font-myFont font-bold text-sm py-2 text-red-600'>Message - Campo vacio</label>
-                                        :
-                                        <label className='uppercase font-myFont font-bold text-sm py-2 text-[#002336]'>Message</label>
-                                    }
+                                    <label className='uppercase font-myFont font-bold text-sm py-2 text-[#002336]'>message</label>
                                     <textarea
-                                        className='border-2 rounded-lg p-3 flex border-gray-300' type='text' rows='8' name='message'
-                                        onChange={e => setMessageField(e.target.value)}
-                                        value={messageField}
+                                        className={formik.errors.message && formik.touched.message ? 'border-2 rounded-lg p-3 flex border-red-600' : 'border-2 rounded-lg p-3 flex border-gray-300'}
+                                        type='text'
+                                        rows='8'
+                                        name='message'
+                                        value={formik.values.message}
+                                        onChange={formik.handleChange}
+                                        onBlur={formik.handleBlur}
                                     />
+                                    {formik.errors.message && formik.touched.message &&
+                                        <p className='text-red-600 text-sm'>
+                                            {formik.errors.message}
+                                        </p>}
                                 </div>
-                                <button onClick={() => setShowModal(true)} className='w-full p-4  mt-4'>Send Message</button>
-                                {isError == 0? <Modal visible={showModal} setVisible={setShowModal} /> : ''}
+                                <button
+                                    type='submit'
+                                    onClick={() => formSubmitted()}
+                                    className='w-full p-4  mt-4 shadow-xl shadow-gray-400 rounded-xl uppercase bg-gradient-to-r from-[#09B594] to-[#089C7E] text-white'>
+                                    Send Message</button>
+
                             </form>
 
                         </div>
