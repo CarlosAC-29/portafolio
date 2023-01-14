@@ -3,7 +3,6 @@ import Link from 'next/link';
 import { AiOutlineClose, AiOutlineMenu, AiOutlineMail } from 'react-icons/ai';
 import { FaLinkedinIn, FaGithub } from 'react-icons/fa';
 import { links } from './data'
-import LangajesSelector from './LangajesSelector';
 
 export default function Navbar() {
     const [nav, setNav] = useState(false);
