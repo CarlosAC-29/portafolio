@@ -8,8 +8,8 @@ export default function SkillsCard({image, title}) {
         <div className='m-auto'>
             <Image 
             src={image} 
-            width='64px' 
-            height='64px' 
+            width='55px' 
+            height='55px' 
             alt='/' 
             />
         </div>

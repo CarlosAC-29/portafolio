@@ -66,15 +66,15 @@ export default function Navbar() {
                             <div className='flex flex-col justify-center text-center gap-10'>
                                 {links.map((link) => {
                                     return (
-                                        <a className='uppercase mx-20 hover:text-[#09B594]' href={link.url} key={link.id} onClick={handNav}>
+                                        <a className='uppercase  text-left hover:text-[#09B594]' href={link.url} key={link.id} onClick={handNav}>
                                             {link.text}
                                         </a>
                                     )
                                 })}
                             </div>
                         </ul>
-                        <div className='pt-40'>
-                            <p className='uppercase text-center tracking-widest text-[#5651e5]'> Connect with me </p>
+                        <div className='pt-20'>
+                            <p className='uppercase text-center tracking-widest text-[#09B594]'> Connect with me </p>
                             <div className='flex items-center justify-between my-4 w-full sm:w-[80%]'>
                                 <Link href='https://www.linkedin.com/in/carlos-c%C3%A1ceres-836596137/'>
                                     <div className='text-[#002336] rounded-full shadow-lg shadow-gray-400 p-3 cursor-pointer hover:scale-105 ease-in duration-500'>

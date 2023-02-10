@@ -11,6 +11,7 @@ import postgresIcon from '../public/images/postgre.png';
 import javaIcon from '../public/images/java.png';
 import NextJsIcon from '../public/images/nextjs.png';
 import cIcon from '../public/images/c-.png';
+import pyIcon from '../public/images/python.png'
 
 
 export default function Skills() {
@@ -33,6 +34,7 @@ export default function Skills() {
                 <SkillsCard image={postgresIcon} title='PostgreSQL'/>
                 <SkillsCard image={javaIcon} title='JAVA'/>
                 <SkillsCard image={cIcon} title='C++'/>
+                <SkillsCard image={pyIcon} title='Python'/>
             </div>
         </div>
 

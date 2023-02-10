@@ -1,5 +1,6 @@
 import React from 'react'
 import MrLocksmith from '../public/images/MrLocksmith.jpg';
+import Mkaly from '../public/images/Mkaly.jpg';
 import ProjectItem from './ProjectItem';
 
 
@@ -11,7 +12,8 @@ export default function Proyects() {
           <p className='font-myFont font-bold text-4xl tracking-widest uppercase text-[#09B594]'>Projects</p>
         </div>
         <div className='grid md:grid-cols-2 gap-8'>
-          <ProjectItem imageIcon={MrLocksmith} title='Mr Locksmith Website' technologies='ReactJS, Sass' linkProject='https://mrlocksmithutah.com/' />
+          <ProjectItem imageIcon={MrLocksmith} title='Mr Locksmith Website' technologies='ReactJS,Sass' linkProject='https://mrlocksmithutah.com/' />
+          <ProjectItem imageIcon={Mkaly} title='Mkaly' technologies='NextJS ,DJango,Tailwind,MaterialUI' linkProject='https://mkaly.vercel.app/' />
         </div>
       </div>
     </div>

@@ -114,7 +114,7 @@ export default function Contact(props) {
                                         <label className='uppercase font-myFont font-bold text-sm py-2 text-[#002336]'>number</label>
                                         <input
                                             className={formik.errors.number && formik.touched.number ? 'border-2 rounded-lg p-3 flex border-red-600' : 'border-2 rounded-lg p-3 flex border-gray-300'}
-                                            maxlength='10'
+                                            maxLength='10'
                                             type='text'
                                             name='number'
                                             value={formik.values.number}
