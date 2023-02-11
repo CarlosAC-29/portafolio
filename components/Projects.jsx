@@ -12,8 +12,8 @@ export default function Proyects() {
           <p className='font-myFont font-bold text-4xl tracking-widest uppercase text-[#09B594]'>Projects</p>
         </div>
         <div className='grid md:grid-cols-2 gap-8'>
-          <ProjectItem imageIcon={MrLocksmith} title='Mr Locksmith Website' technologies='ReactJS,Sass' linkProject='https://mrlocksmithutah.com/' />
-          <ProjectItem imageIcon={Mkaly} title='Mkaly' technologies='NextJS ,DJango,Tailwind,MaterialUI' linkProject='https://mkaly.vercel.app/' />
+          <ProjectItem imageIcon={MrLocksmith} title='Mr Locksmith Website' technologies='ReactJS,Sass' linkProject='https://mrlocksmithutah.com/' linkGit='https://github.com/CarlosAC-29/Mr.Locksmith' />
+          <ProjectItem imageIcon={Mkaly} title='Mkaly' technologies='NextJS ,DJango,Tailwind,MaterialUI' linkProject='https://mkaly.vercel.app/' linkGit='https://github.com/andrew921as/Mkaly'  />
         </div>
       </div>
     </div>

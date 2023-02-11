@@ -6,16 +6,26 @@ export const links = [
     },
     {
       id: 2,
+      text: 'Education',
+      url: '#education',
+    },
+    {
+      id: 3,
+      text: 'Experience',
+      url: '#experience',
+    },
+    {
+      id: 4,
       text: 'skills',
       url: '#skills',
     },
     {
-      id: 3,
+      id: 5,
       text: 'projects',
       url: '#projects',
     },
     {
-      id: 4,
+      id: 6,
       text: 'contact',
       url: '#contact',
     },

@@ -58,11 +58,11 @@ export default function Main() {
                                 <AiOutlineMail size={20} />
                             </div>
                         </a>
-                        <Link href='#contact'>
+                        {/* <Link href='#contact'>
                             <div className='bg-white text-[#0077B6] rounded-full shadow-lg shadow-gray-400 p-5 cursor-pointer  hover:scale-x-105 hover:bg-[#0077B6] hover:text-white ease-in duration-200'>
                                 <BsFillPersonLinesFill size={20} />
                             </div>
-                        </Link>
+                        </Link> */}
 
                     </div>
                     <div className='grid justify-center md:justify-start items-center pb-32 md:py-0 relative ease-out'>
@@ -81,16 +81,10 @@ export default function Main() {
                                 className='block px-4 py-2 cursor-pointer text-[#089C7E] hover:bg-[#089C7E] hover:text-white ease-in duration-75'
 
                             >
-                                Español
+                                Spanish
                             </a>
                         </div>
                     </div>
-
-                    {/* <div className='py-10 flex justify-center md:justify-start'>
-                        <a download='Carlos_Caceres' href='hojadevida.pdf'>
-                            <button className='bg-[#09B594] p-3 w-[100%] flex justify-center gap-1 transition-all hover:scale-110'><FaFileDownload size={20}/> Download CV</button>
-                        </a>
-                    </div> */}
                 </div>
                 <div className='w-full items-center'>
 

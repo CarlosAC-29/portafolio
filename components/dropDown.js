@@ -10,7 +10,7 @@ export default function dropDown() {
         </div>
         <div>
             <a>English</a>
-            <a>Español</a>
+            <a>Spanish</a>
         </div>
     </div>
   )

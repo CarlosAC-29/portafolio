@@ -41,7 +41,7 @@ export default function Navbar() {
                         <div>
                             {links.map((link) => {
                                 return (
-                                    <a className='uppercase mx-20 hover:text-[#09B594]' href={link.url} key={link.id} onClick={handleClick}>
+                                    <a className='uppercase mx-[70px] hover:text-[#09B594]' href={link.url} key={link.id} onClick={handleClick}>
                                         {link.text}
                                     </a>
                                 )
