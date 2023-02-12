@@ -7,7 +7,7 @@ import colombia from '../public/images/colombia.png';
 
 export default function Footer() {
     return (
-        <div className='w-full md:h-[220px] h-screen py-10 bg-[#002336]'>
+        <div className='w-full md:h-[220px] h-[500px] py-10 bg-[#002336]'>
             <div className='flex flex-col md:flex-row text-center md:justify-around justify-center gap-10'>
                 <div>
                     <p className='text-[#09B594] pb-1 text-[1.2rem]'>Socials</p>

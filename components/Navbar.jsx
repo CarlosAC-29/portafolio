@@ -35,9 +35,9 @@ export default function Navbar() {
 
     return (
         <div className={shadow ? 'fixed w-full h-20 shadow-xl z-[1000] bg-[#002336] text-white transition ease-in-out' : 'fixed w-full h-20 z-[1000]'}>
-            <div className='flex xs:justify-end sm:justify-end md:justify-center items-center w-full h-full px-2 2xl:px-16'>
+            <div className='flex xs:justify-end sm:justify-end lg:justify-center items-center w-full h-full px-2 2xl:px-16'>
                 <div>
-                    <ul className='font-myFont font-bold hidden md:flex gap-20'>
+                    <ul className='font-myFont font-bold hidden lg:flex  gap-20'>
                         <div>
                             {links.map((link) => {
                                 return (
@@ -48,13 +48,13 @@ export default function Navbar() {
                             })}
                         </div>
                     </ul>
-                    <div onClick={handNav} className='md:hidden '>
+                    <div onClick={handNav} className='lg:hidden '>
                         <AiOutlineMenu size={25} />
                     </div>
                 </div>
             </div>
-            <div className={nav ? 'md:hidden fixed left-0 top-0 w-full h-screen bg-black/70' : ''}>
-                <div className={nav ? 'fixed left-0 top-0 w-[75%] sm:w-[60%] md:w-[45%] h-screen bg-[#ecf0f3] p-10 ease-in duration-500'
+            <div className={nav ? 'lg:hidden fixed left-0 top-0 w-full h-screen bg-black/70' : ''}>
+                <div className={nav ? 'fixed left-0 top-0 w-[75%] sm:w-[60%] lg:w-[45%] h-screen bg-[#ecf0f3] p-10 ease-in duration-500'
                     : 'fixed left-[-100%] h-screen top-0 p-10 ease-in duration-500'}>
                     <div className='flex w-full justify-end'>
                         <div onClick={handNav} className='rounded-full shadow-lg shadow-gray-400 p-3 cursor-pointer'>
