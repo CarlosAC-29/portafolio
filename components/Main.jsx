@@ -40,7 +40,7 @@ export default function Main() {
 
     return (
         <div id='home' className='w-full flex items-center justify-center text-center py-[8rem] relative'>
-            <div className='font-myFont max-w-[1240px] w-full h-full mx-auto lg:flex gap-20 justify-center items-center px-10 '>
+            <div className='mt-2 font-myFont max-w-[1240px] w-full h-full mx-auto lg:flex gap-20 justify-center items-center px-10 '>
                 <div className='w-full text-center lg:text-left'>
                     <p className='uppercase text-5xl font-bold tracking-widest text-[#09B594]'>{t.main.title}</p>
                     <h1 className='text-4xl py-4 text-gray-700'>{t.main.subtitle} <span className='text-[#00659C]'>Carlos</span></h1>
@@ -99,9 +99,9 @@ export default function Main() {
                         </div>
                     </div>
                 </div>
-                <div className='w-full items-center'>
-
-                    <div className='w-full object-cover'>
+                <div className='w-full items-center relative'>
+                        <div className='bg-[#089C7E] shadow-2xl w-[95%] h-[100%] rounded-xl absolute right-0 top-3 z-[-1]'> s</div>
+                    <div className='w-[95%] h-[90%] object-cover z-1 overflow-hidden rounded-xl'>
                         <Image src={imageMain} alt='Image of Carlos Caceres' />
                     </div>
                 </div>

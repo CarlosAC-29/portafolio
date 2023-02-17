@@ -57,7 +57,8 @@
     },
     "navbar": {
         "home":"home",
-        "contact":"contact me"
+        "contact":"contact me",
+        "lang":"lang"
     },
     "error": {
         "requiered":"*Required"

@@ -57,6 +57,7 @@
     },
     "navbar": {
         "home":"Inicio",
-        "contact":"contactame"
+        "contact":"contactame",
+        "lang":"idioma"
     }
 }

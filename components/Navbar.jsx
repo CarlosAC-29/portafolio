@@ -157,6 +157,8 @@ const DropdownLan = () => {
     const [isOpen, setOpen] = useState(false)
     const [shadow, setShadow] = useState(false);
     const router = useRouter();
+    const { locale } = router;
+    const t = locale === 'en' ? en : es;
 
     const changeLog = (e) => {
         //console.log(e.target.value);
@@ -192,10 +194,10 @@ const DropdownLan = () => {
 
     return (
         <div className={shadow ? '  text-white mx-2 flex justify-center lg:justify-start items-center pb-32 lg:py-0 relative ease-out hover:text-[#09B594]' : 'text-[#002336] mx-2 flex justify-center lg:justify-start items-center pb-32 lg:py-0 relative ease-out hover:text-[#09B594]'}>
-            <div className='flex gap-2 items-center cursor-pointer'>
+            <div onClick={() => setOpen(!isOpen)} className='flex gap-2 items-center cursor-pointer group transition-all group-hover:text-[#09B594] hover:border-[#09B594]'>
+                <span className='flex group overflow-hidden uppercase group-hover:text-[#09B594]'>{t.navbar.lang}</span>
+                <TbLanguage size={30} />
 
-                <a onClick={() => setOpen(!isOpen)} className={shadow ? '  uppercase' : ' uppercase'}>Lang</a>
-                <TbLanguage color={shadow ? '#fff' : '#002336'} size={30} />
             </div>
             <div ref={menuRefEs} className={isOpen ? 'flex flex-col justify-center m-auto mt-2 lg:m-2 w-12 py-2 uppercase text-sm bg-white rounded-lg shadow-2xl absolute left-0 right-0 lg:left-0 top-[2rem]'
                 : 'hidden ease-out'}>
