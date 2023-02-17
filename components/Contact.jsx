@@ -3,6 +3,7 @@ import Image from 'next/image';
 import ContactImage from '../public/images/contact.jpg';
 import { AiOutlineMail } from 'react-icons/ai';
 import { HiOutlineChevronDoubleUp } from 'react-icons/hi';
+import { FiSend } from 'react-icons/fi'
 import Link from 'next/link';
 import emailjs from '@emailjs/browser';
 import { useFormik } from 'formik';
@@ -10,13 +11,13 @@ import { basicSchema } from '../schemas';
 import Swal from 'sweetalert2';
 import en from '../lang/en.json'
 import es from '../lang/es.json'
-import {useRouter} from 'next/router';
+import { useRouter } from 'next/router';
 
 
 export default function Contact() {
     const router = useRouter();
-	const {locale} = router;
-	const t = locale === 'en' ? en : es;
+    const { locale } = router;
+    const t = locale === 'en' ? en : es;
 
     const [verified, setVerified] = useState(false)
 
@@ -50,14 +51,23 @@ export default function Contact() {
     const formSubmitted = () => {
         // console.log(verified)
         if (verified == true) {
+            if(t == 'en') {
             Swal.fire({
                 text: "I'll be in touch with you as soon as posible 👍",
                 icon: 'success',
                 iconColor: '#09B594',
                 confirmButtonColor: '#09B594',
                 confirmButtonText: 'ok'
-              })
-              
+            })
+        }else{
+            Swal.fire({
+                text: "Me pondré en contacto con usted lo antes posible 👍",
+                icon: 'success',
+                iconColor: '#09B594',
+                confirmButtonColor: '#09B594',
+                confirmButtonText: 'ok'
+            })
+        }
         }
         setVerified(false)
     }
@@ -68,7 +78,7 @@ export default function Contact() {
         <div id='contact' className='w-full lg:h-full'>
             <div className='max-w-[1240px] m-auto px-2 py-16 w-full'>
                 <div className='w-full flex justify-center text-center gap-5 py-3 mb-10 rounded-lg bg-[#09B594]'>
-                    
+
                     <p className='font-myFont font-bold text-4xl md:text-5xl tracking-widest  text-[#002336] uppercase'>{t.contact.title}</p>
                 </div>
                 <div className='grid lg:grid-cols-5 gap-8'>
@@ -167,8 +177,10 @@ export default function Contact() {
                                 <button
                                     type='submit'
                                     onClick={() => formSubmitted()}
-                                    className='w-full p-4  mt-4 shadow-xl shadow-gray-400 rounded-xl uppercase bg-gradient-to-r from-[#09B594] to-[#089C7E] text-white'>
-                                    {t.contact.sendMessage}</button>
+                                    class="w-full px-5 py-2.5 relative rounded-xl group overflow-hidden font-medium bg-[#09B594] text-[#002336] inline-block">
+                                    <span class="absolute top-0 left-0 flex w-full h-0 mb-0 transition-all duration-200 ease-out transform translate-y-0 bg-[#002336] group-hover:h-full opacity-90"></span>
+                                    <span class="flex gap-3 justify-center relative group-hover:text-white uppercase font-bold"> {t.contact.sendMessage} <FiSend size={22}/> </span>
+                                </button>
 
                             </form>
 

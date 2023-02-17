@@ -70,9 +70,17 @@ export default function Main() {
 
                     </div>
                     <div className='grid justify-center lg:justify-start items-center pb-32 lg:py-0 relative ease-out'>
-                        <div className='flex gap-3 mt-8 p-3 bg-gradient-to-r from-[#09B594] to-[#089C7E] shadow-xl shadow-gray-400 rounded-xl'>
-                            <FaFileDownload size={20} color='#fff'/>
-                            <button onClick={() => setOpen(!isOpen)} className=' uppercase  text-white'>{t.main.button_cv}</button>
+
+                        <div className=''>
+
+                            <button
+                                    
+                                    onClick={() => setOpen(!isOpen)}
+                                    class="mt-8 px-5 py-2.5 relative rounded-2xl group overflow-hidden font-medium bg-[#09B594] text-[#fff] inline-block focus:bg-[#002336]">
+                                    <span class="absolute top-0 left-0 flex w-full h-0 mb-0 transition-all duration-200 ease-out transform translate-y-0 bg-[#002336] group-hover:h-full opacity-90"></span>
+                                    <span class=" flex gap-3 relative group-hover:text-white uppercase font-bold"><FaFileDownload size={20} color='#fff' /> {t.main.button_cv}</span>
+                                </button>
+
                         </div>
                         <div ref={menuRefEs} className={isOpen ? 'm-auto mt-2 lg:m-2 w-28 py-2 uppercase text-sm bg-white rounded-lg shadow-2xl absolute left-0 right-0 lg:left-1 top-[5rem]' : 'hidden ease-out'}>
                             <a
