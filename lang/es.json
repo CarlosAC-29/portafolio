@@ -1,5 +1,62 @@
 {
-"main": {
-    "title":"HOLA MUNDO"
-}
+    "main": {
+        "title": "Hola mundo",
+        "subtitle": "Mi nombre es",
+        "Intro": "Soy un desarrollador de software radicado en Cali, Colombia🌎, apasionado por el desarrollo de nuevas tecnologías que puedan mejorar el día a día de las personas. En este momento, soy estudiante de ingeniería de sistemas en la Universidad del Valle.",
+        "message": "Desarrollador de software freelancer",
+        "button_cv": " Hoja de vida",
+        "OptionEn":"Inglés",
+        "OptionEs":"Español"
+    },
+    "education": {
+        "title": "EDUCACIÓN",
+        "carda1": {
+            "title_card": "Ingeniería en sistemas",
+            "Institution": "Institución : Univerisdad del Valle, Cali, Colombia",
+            "time": "6to Semestre"
+        },
+
+        "carda2": {
+            "title_card": "Técnico de desarrollo de software",
+            "Institution": "Institución : SENA, Cali, Colombia",
+            "time": "ago.2016 - jul.2018"
+        }
+    },
+    "experience":{
+        "title": "EXPERIENCIA",
+        "card1":{
+            "charge":"ADMINISTRADOR WEB",
+            "company":"Universidad del Valle",
+            "date":"Inicio : sept. 2022 - actualidad",
+            "location":"Cali, Valle del Cauca, Colombia · Híbrido"
+        }
+    },
+    "skills":{
+        "title":"Habilidades"
+    },
+    "proyects":{
+        "title":"proyectos",
+        "buttonView":"Ver",
+        "buttonGit": "Git"
+    },
+    "contact":{
+        "title":"Contacto",
+        "name":"nombre",
+        "number":"número",
+        "email":"correo", 
+        "message":"mensaje",
+        "sendMessage":"enviar mensaje",
+        "charge":"Estudiante de ingeniería de sistemas",
+        "description":"Estoy disponible para trabajar como freelance o a tiempo parcial. Ponte en contacto conmigo y estaré encantada de hablar contigo.",
+        "connect":"Conecta conmigo"
+    },
+    "footer":{
+        "socials":"Redes",
+        "email":"Correo",
+        "nationality":"Nacionalidad"
+    },
+    "navbar": {
+        "home":"Inicio",
+        "contact":"contactame"
+    }
 }

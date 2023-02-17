@@ -35,7 +35,7 @@ html {
     @apply cursor-pointer
   }
 
-  button {
+  /* button {
     @apply shadow-xl shadow-gray-400 rounded-xl uppercase bg-gradient-to-r from-[#09B594] to-[#089C7E] text-white
-  }
+  } */
 }

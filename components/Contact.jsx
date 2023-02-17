@@ -3,15 +3,20 @@ import Image from 'next/image';
 import ContactImage from '../public/images/contact.jpg';
 import { AiOutlineMail } from 'react-icons/ai';
 import { HiOutlineChevronDoubleUp } from 'react-icons/hi';
-import { MdOutlineContactPhone } from 'react-icons/md';
 import Link from 'next/link';
 import emailjs from '@emailjs/browser';
 import { useFormik } from 'formik';
 import { basicSchema } from '../schemas';
-import Swal from 'sweetalert2'
+import Swal from 'sweetalert2';
+import en from '../lang/en.json'
+import es from '../lang/es.json'
+import {useRouter} from 'next/router';
 
 
-export default function Contact(props) {
+export default function Contact() {
+    const router = useRouter();
+	const {locale} = router;
+	const t = locale === 'en' ? en : es;
 
     const [verified, setVerified] = useState(false)
 
@@ -21,11 +26,11 @@ export default function Contact(props) {
 
     const onSubmit = async (values, actions) => {
         setVerified(true)
-        console.log(verified)
-        console.log(values)
-        console.log(actions)
+        // console.log(verified)
+        // console.log(values)
+        // console.log(actions)
         //EmailJs Section
-        emailjs.send('service_ifianwe', 'template_p48t27s', values, 'JuTCPJD8FaqSMXMVo').then(() => { console.log('email sent'); });
+        emailjs.send('service_ifianwe', 'template_p48t27s', values, 'JuTCPJD8FaqSMXMVo').then(() => { });
         await new Promise((resolve) => setTimeout(resolve, 1000))
         actions.resetForm()
     }
@@ -43,7 +48,7 @@ export default function Contact(props) {
     })
 
     const formSubmitted = () => {
-        console.log(verified)
+        // console.log(verified)
         if (verified == true) {
             Swal.fire({
                 text: "I'll be in touch with you as soon as posible 👍",
@@ -63,8 +68,8 @@ export default function Contact(props) {
         <div id='contact' className='w-full lg:h-full'>
             <div className='max-w-[1240px] m-auto px-2 py-16 w-full'>
                 <div className='w-full flex justify-center text-center gap-5 py-3 mb-10 rounded-lg bg-[#09B594]'>
-                    <MdOutlineContactPhone className='text-4xl md:text-5xl text-[#002336]' />
-                    <p className='font-myFont font-bold text-4xl md:text-5xl tracking-widest  text-[#002336]'>Contact me</p>
+                    
+                    <p className='font-myFont font-bold text-4xl md:text-5xl tracking-widest  text-[#002336] uppercase'>{t.contact.title}</p>
                 </div>
                 <div className='grid lg:grid-cols-5 gap-8'>
                     <div className='col-span-3 lg:col-span-2 w-full bg-[#c8cdd0] shadow-xl shadow-gray-400 rounded-xl p-4'>
@@ -74,11 +79,11 @@ export default function Contact(props) {
                             </div>
                             <div>
                                 <h2 className='py-1 font-myFont font-bold text-4xl text-[#002336]'>Carlos Cáceres</h2>
-                                <p className='font-myFont text-lg font-semibold text-[#0077B6]'>Systems engineering student</p>
-                                <p className='font-myFont py-4 font-medium text-xl'>I am available for freelance or part-time positions. Contact me and I would be more than happy in to talking with you</p>
+                                <p className='font-myFont text-lg font-semibold text-[#0077B6]'>{t.contact.charge}</p>
+                                <p className='font-myFont py-4 font-medium text-xl'>{t.contact.description}</p>
                             </div>
                             <div>
-                                <p className='font-myFont text-lg font-semibold text-[#0077B6] pb-4'>Connect with me</p>
+                                <p className='font-myFont text-lg font-semibold text-[#0077B6] pb-4'>{t.contact.connect}</p>
                                 <div className='flex items-start justify-between max-w-[300px]'>
                                     <div className='flex text-center gap-4'>
                                         <AiOutlineMail size={28} color='#0077B6' />
@@ -96,7 +101,7 @@ export default function Contact(props) {
                                 <div className='grid md:grid-cols-2 gap-4 w-full py-2 '>
                                     <div className='flex flex-col'>
                                         <label
-                                            className='uppercase font-myFont font-bold text-sm py-2 text-[#002336]'>name</label>
+                                            className='uppercase font-myFont font-bold text-sm py-2 text-[#002336]'>{t.contact.name}</label>
                                         <input
                                             className={formik.errors.name && formik.touched.name ? 'border-2 rounded-lg p-3 flex border-red-600' : 'border-2 rounded-lg p-3 flex border-gray-300'}
                                             type='text'
@@ -111,7 +116,7 @@ export default function Contact(props) {
                                             </p>}
                                     </div>
                                     <div className='flex flex-col'>
-                                        <label className='uppercase font-myFont font-bold text-sm py-2 text-[#002336]'>number</label>
+                                        <label className='uppercase font-myFont font-bold text-sm py-2 text-[#002336]'>{t.contact.number}</label>
                                         <input
                                             className={formik.errors.number && formik.touched.number ? 'border-2 rounded-lg p-3 flex border-red-600' : 'border-2 rounded-lg p-3 flex border-gray-300'}
                                             maxLength='10'
@@ -129,7 +134,7 @@ export default function Contact(props) {
                                     </div>
                                 </div>
                                 <div className='flex flex-col py-2'>
-                                    <label className='uppercase font-myFont font-bold text-sm py-2 text-[#002336]'>email</label>
+                                    <label className='uppercase font-myFont font-bold text-sm py-2 text-[#002336]'>{t.contact.email}</label>
                                     <input
                                         className={formik.errors.email && formik.touched.email ? 'border-2 rounded-lg p-3 flex border-red-600' : 'border-2 rounded-lg p-3 flex border-gray-300'}
                                         type='text'
@@ -144,7 +149,7 @@ export default function Contact(props) {
                                         </p>}
                                 </div>
                                 <div className='flex flex-col py-2'>
-                                    <label className='uppercase font-myFont font-bold text-sm py-2 text-[#002336]'>message</label>
+                                    <label className='uppercase font-myFont font-bold text-sm py-2 text-[#002336]'>{t.contact.message}</label>
                                     <textarea
                                         className={formik.errors.message && formik.touched.message ? 'border-2 rounded-lg p-3 flex border-red-600' : 'border-2 rounded-lg p-3 flex border-gray-300'}
                                         type='text'
@@ -163,7 +168,7 @@ export default function Contact(props) {
                                     type='submit'
                                     onClick={() => formSubmitted()}
                                     className='w-full p-4  mt-4 shadow-xl shadow-gray-400 rounded-xl uppercase bg-gradient-to-r from-[#09B594] to-[#089C7E] text-white'>
-                                    Send Message</button>
+                                    {t.contact.sendMessage}</button>
 
                             </form>
 

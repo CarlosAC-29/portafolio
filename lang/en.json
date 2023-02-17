@@ -1,5 +1,65 @@
 {
-"main": {
-    "title":"HELLO WORLD"
-}
+    "main": {
+        "title": "HELLO WORLD",
+        "subtitle": "My name",
+        "Intro": "I'm a software developer based in Cali, Colombia🌎, who is passionate about developing new technologies that may improve people's day-to-day lives. At this time, I'm a system engineering student at the Universidad del Valle. ",
+        "message": "A freelancer software developer",
+        "button_cv": "Download CV",
+        "OptionEn":"English",
+        "OptionEs":"Spanish"
+    },
+    "education": {
+        "title": "EDUCATION",
+        "carda1": {
+            "title_card": "Systems Engineer",
+            "Institution": "Institution : Univerisdad del Valle, Cali, Colombia",
+            "time": "6th Semester"
+        },
+
+        "carda2": {
+            "title_card": "Software Development Technician",
+            "Institution": "Institution : SENA, Cali, Colombia",
+            "time": "ago.2016 - jul.2018"
+        }
+    },
+    "experience":{
+        "title": "EXPERIENCE",
+        "card1":{
+            "charge":"WEBSITE ADMINISTRATOR",
+            "company":"Universidad del Valle",
+            "date":"Inicio : sept. 2022 - actuality",
+            "location":"Cali, Valle del Cauca, Colombia · Hybrid"
+        }
+    },
+    "skills":{
+        "title":"Skills"
+    },
+    "proyects":{
+        "title":"proyects",
+        "buttonView":"View",
+        "buttonGit": "Git"
+    },
+    "contact":{
+        "title":"Contact me",
+        "name":"name",
+        "number":"number",
+        "email":"email", 
+        "message":"message",
+        "sendMessage":"send message",
+        "charge":"Systems engineering student",
+        "description":"I am available for freelance or part-time positions. Contact me and I would be more than happy in to talking with you",
+        "connect":"Connect with me"
+    },
+    "footer":{
+        "socials":"Socials",
+        "email":"email",
+        "nationality":"Nationality"
+    },
+    "navbar": {
+        "home":"home",
+        "contact":"contact me"
+    },
+    "error": {
+        "requiered":"*Required"
+    }
 }

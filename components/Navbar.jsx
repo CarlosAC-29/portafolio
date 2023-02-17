@@ -1,14 +1,32 @@
-import React, { useEffect, useState } from 'react';
+import React, { useRef, useEffect, useState } from 'react';
 import Link from 'next/link';
 import { AiOutlineClose, AiOutlineMenu, AiOutlineMail } from 'react-icons/ai';
 import { FaLinkedinIn, FaGithub } from 'react-icons/fa';
+import { TbLanguage } from 'react-icons/tb';
 import { links } from './data'
+import { useRouter } from "next/router"
+import Dropdown from './dropDown';
+import Toggle from './Toggle';
+import en from '../lang/en.json'
+import es from '../lang/es.json'
+
 
 export default function Navbar() {
     const [nav, setNav] = useState(false);
     const [shadow, setShadow] = useState(false);
+    const router = useRouter();
+    const { locale } = router;
+    const t = locale === 'en' ? en : es;
+    //console.log(router)
     const handNav = () => {
         setNav(!nav);
+    }
+
+    const changeLog = (e) => {
+        // console.log(e.target.value);
+        router.push(router.pathname, router.pathname, {
+            locale: e.target.value
+        })
     }
 
     const handleClick = (e) => {
@@ -38,21 +56,44 @@ export default function Navbar() {
             <div className='flex xs:justify-end sm:justify-end lg:justify-center items-center w-full h-full px-2 2xl:px-16'>
                 <div>
                     <ul className='font-myFont font-bold hidden lg:flex  gap-20'>
-                        <div>
-                            {links.map((link) => {
-                                return (
-                                    <a className='uppercase mx-[70px] hover:text-[#09B594]' href={link.url} key={link.id} onClick={handleClick}>
-                                        {link.text}
-                                    </a>
-                                )
-                            })}
+
+                        < div className='flex justify-center items-center'>
+
+                            <a className='uppercase mx-[42px] hover:text-[#09B594]' href='#home' onClick={handleClick}>
+                                {t.navbar.home}
+                            </a>
+                            <a className='uppercase mx-[42px] hover:text-[#09B594]' href='#education' onClick={handleClick}>
+                                {t.education.title}
+                            </a>
+                            <a className='uppercase mx-[42px] hover:text-[#09B594]' href='#experience' onClick={handleClick}>
+                                {t.experience.title}
+                            </a>
+                            <a className='uppercase mx-[42px] hover:text-[#09B594]' href='#skills' onClick={handleClick}>
+                                {t.skills.title}
+                            </a>
+                            <a className='uppercase mx-[42px] hover:text-[#09B594]' href='#projects' onClick={handleClick}>
+                                {t.proyects.title}
+                            </a>
+                            <a className='uppercase mx-[42px] hover:text-[#09B594]' href='#contact' onClick={handleClick}>
+                                {t.navbar.contact}
+                            </a>
+
+                            <DropdownLan />
+                            {/* <select className='mx-5 bg-inherit appearance-none p-2' onChange={changeLog}>
+                                <option className='bg-[#fff] text-[#09B594] uppercase appearance-none hover:text-[#09B594] ' value="es">ES</option>
+                                <option className='bg-[#fff] text-[#09B594] uppercase appearance-none hover:text-[#09B594]' value="en">EN</option>
+                            </select> */}
+
+
                         </div>
+
+
                     </ul>
-                    <div onClick={handNav} className='lg:hidden '>
-                        <AiOutlineMenu size={25} />
+                    <div onClick={handNav} className='lg:hidden  '>
+                        <AiOutlineMenu size={30} />
                     </div>
                 </div>
-            </div>
+            </div >
             <div className={nav ? 'lg:hidden fixed left-0 top-0 w-full h-screen bg-black/70' : ''}>
                 <div className={nav ? 'fixed left-0 top-0 w-[75%] sm:w-[60%] lg:w-[45%] h-screen bg-[#ecf0f3] p-10 ease-in duration-500'
                     : 'fixed left-[-100%] h-screen top-0 p-10 ease-in duration-500'}>
@@ -61,20 +102,32 @@ export default function Navbar() {
                             <AiOutlineClose className='text-[#002336]' size={25} />
                         </div>
                     </div>
-                    <div className='py-4 flex flex-col'>
-                        <ul className='my-5 uppercase text-[#002336]'>
-                            <div className='flex flex-col justify-center text-center gap-10'>
-                                {links.map((link) => {
-                                    return (
-                                        <a className='uppercase  text-left hover:text-[#09B594]' href={link.url} key={link.id} onClick={handNav}>
-                                            {link.text}
-                                        </a>
-                                    )
-                                })}
+                    <div className=' flex flex-col'>
+                        <ul className='items-start my-5 uppercase text-[#002336]'>
+                            <div className='flex flex-col justify-start text-start items-start gap-9'>
+                                <a className='uppercase  hover:text-[#09B594]' href='#home' onClick={handleClick}>
+                                    {t.navbar.home}
+                                </a>
+                                <a className='uppercase  hover:text-[#09B594]' href='#education' onClick={handleClick}>
+                                    {t.education.title}
+                                </a>
+                                <a className='uppercase  hover:text-[#09B594]' href='#experience' onClick={handleClick}>
+                                    {t.experience.title}
+                                </a>
+                                <a className='uppercase  hover:text-[#09B594]' href='#skills' onClick={handleClick}>
+                                    {t.skills.title}
+                                </a>
+                                <a className='uppercase  hover:text-[#09B594]' href='#projects' onClick={handleClick}>
+                                    {t.proyects.title}
+                                </a>
+                                <a className='uppercase  hover:text-[#09B594]' href='#contact' onClick={handleClick}>
+                                    {t.navbar.contact}
+                                </a>
+                                <Toggle />
                             </div>
                         </ul>
-                        <div className='pt-20'>
-                            <p className='uppercase text-center tracking-widest text-[#09B594]'> Connect with me </p>
+                        <div className='pt-10'>
+                            <p className='uppercase text-center tracking-widest text-[#09B594]'> {t.contact.connect} </p>
                             <div className='flex items-center justify-between my-4 w-full sm:w-[80%]'>
                                 <Link href='https://www.linkedin.com/in/carlos-c%C3%A1ceres-836596137/'>
                                     <div className='text-[#002336] rounded-full shadow-lg shadow-gray-400 p-3 cursor-pointer hover:scale-105 ease-in duration-500'>
@@ -96,7 +149,72 @@ export default function Navbar() {
                     </div>
                 </div>
             </div>
-        </div>
+        </div >
     )
 }
+
+const DropdownLan = () => {
+    const [isOpen, setOpen] = useState(false)
+    const [shadow, setShadow] = useState(false);
+    const router = useRouter();
+
+    const changeLog = (e) => {
+        //console.log(e.target.value);
+        router.push(router.pathname, router.pathname, {
+            locale: e.target.value
+        })
+    }
+
+    useEffect(() => {
+        const handleShadow = () => {
+            if (window.scrollY >= 90) {
+                setShadow(true)
+            } else {
+                setShadow(false)
+            }
+        }
+        window.addEventListener('scroll', handleShadow)
+    }, [])
+    const menuRefEs = useRef();
+    useEffect(() => {
+        let handler = (e) => {
+            if (!menuRefEs.current.contains(e.target)) {
+                setOpen(false)
+                //console.log(menuRefEs.current)
+            }
+
+        }
+
+        document.addEventListener("mousedown", handler)
+    })
+
+
+
+    return (
+        <div className={shadow ? '  text-white mx-2 flex justify-center lg:justify-start items-center pb-32 lg:py-0 relative ease-out hover:text-[#09B594]' : 'text-[#002336] mx-2 flex justify-center lg:justify-start items-center pb-32 lg:py-0 relative ease-out hover:text-[#09B594]'}>
+            <div className='flex gap-2 items-center cursor-pointer'>
+
+                <a onClick={() => setOpen(!isOpen)} className={shadow ? '  uppercase' : ' uppercase'}>Lang</a>
+                <TbLanguage color={shadow ? '#fff' : '#002336'} size={30} />
+            </div>
+            <div ref={menuRefEs} className={isOpen ? 'flex flex-col justify-center m-auto mt-2 lg:m-2 w-12 py-2 uppercase text-sm bg-white rounded-lg shadow-2xl absolute left-0 right-0 lg:left-0 top-[2rem]'
+                : 'hidden ease-out'}>
+                <button
+                    value='es'
+                    onClick={changeLog}
+                    className=' uppercase block p-2 cursor-pointer text-[#089C7E] hover:bg-[#089C7E] hover:text-white ease-in duration-75'
+                >
+                    Es
+                </button>
+                <button
+                    value='en'
+                    onClick={changeLog}
+                    className=' uppercase block p-2 cursor-pointer text-[#089C7E] hover:bg-[#089C7E] hover:text-white ease-in duration-75'
+                >
+                    EN
+                </button>
+            </div>
+        </div>
+    );
+};
 
