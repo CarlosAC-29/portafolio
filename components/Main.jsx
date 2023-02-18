@@ -99,8 +99,7 @@ export default function Main() {
                         </div>
                     </div>
                 </div>
-                <div className='w-full items-center relative'>
-                        <div className='bg-[#089C7E] shadow-2xl w-[95%] h-[100%] rounded-xl absolute right-0 top-3 z-[-1]'> s</div>
+                <div className='w-full items-center relative'>                      
                     <div className='w-[95%] h-[90%] object-cover z-1 overflow-hidden rounded-xl'>
                         <Image src={imageMain} alt='Image of Carlos Caceres' />
                     </div>
