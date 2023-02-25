@@ -2,7 +2,6 @@ import React, { useRef, useState, useEffect } from 'react'
 import imageMain from '../public/images/Me.png';
 import Image from 'next/image';
 import Link from 'next/link';
-import dropDown from './dropDown';
 import DropDownCV from './DropdownCV';
 import { AiOutlineMail } from 'react-icons/ai';
 import { FaLinkedinIn, FaGithub, FaFileDownload } from 'react-icons/fa';
