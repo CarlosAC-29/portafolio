@@ -14,7 +14,7 @@ function Toggle() {
       
 
     const changeLog = () => {
-        console.log(toggle);
+        // console.log(toggle);
         if (toggle == 'es') {
             setToggle('en')
         } else {

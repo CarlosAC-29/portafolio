@@ -177,9 +177,9 @@ export default function Contact() {
                                 <button
                                     type='submit'
                                     onClick={() => formSubmitted()}
-                                    class="w-full px-5 py-2.5 relative rounded-xl group overflow-hidden font-medium bg-[#09B594] text-[#002336] inline-block">
-                                    <span class="absolute top-0 left-0 flex w-full h-0 mb-0 transition-all duration-200 ease-out transform translate-y-0 bg-[#002336] group-hover:h-full opacity-90"></span>
-                                    <span class="flex gap-3 justify-center relative group-hover:text-white uppercase font-bold"> {t.contact.sendMessage} <FiSend size={22}/> </span>
+                                    className="w-full px-5 py-2.5 relative rounded-xl group overflow-hidden font-medium bg-[#09B594] text-[#002336] inline-block">
+                                    <span className="absolute top-0 left-0 flex w-full h-0 mb-0 transition-all duration-200 ease-out transform translate-y-0 bg-[#002336] group-hover:h-full opacity-90"></span>
+                                    <span className="flex gap-3 justify-center relative group-hover:text-white uppercase font-bold"> {t.contact.sendMessage} <FiSend size={22}/> </span>
                                 </button>
 
                             </form>

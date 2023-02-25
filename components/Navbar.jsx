@@ -1,11 +1,12 @@
 import React, { useRef, useEffect, useState } from 'react';
 import Link from 'next/link';
+import Dropdown from './Dropdown';
 import { AiOutlineClose, AiOutlineMenu, AiOutlineMail } from 'react-icons/ai';
 import { FaLinkedinIn, FaGithub } from 'react-icons/fa';
 import { TbLanguage } from 'react-icons/tb';
 import { links } from './data'
 import { useRouter } from "next/router"
-import Dropdown from './dropDown';
+//import Dropdown from './dropDown';
 import Toggle from './Toggle';
 import en from '../lang/en.json'
 import es from '../lang/es.json'
@@ -78,7 +79,7 @@ export default function Navbar() {
                                 {t.navbar.contact}
                             </a>
 
-                            <DropdownLan />
+                        <Dropdown />
                             {/* <select className='mx-5 bg-inherit appearance-none p-2' onChange={changeLog}>
                                 <option className='bg-[#fff] text-[#09B594] uppercase appearance-none hover:text-[#09B594] ' value="es">ES</option>
                                 <option className='bg-[#fff] text-[#09B594] uppercase appearance-none hover:text-[#09B594]' value="en">EN</option>
@@ -152,71 +153,3 @@ export default function Navbar() {
         </div >
     )
 }
-
-const DropdownLan = () => {
-    const [isOpen, setOpen] = useState(false)
-    const [shadow, setShadow] = useState(false);
-    const router = useRouter();
-    const { locale } = router;
-    const t = locale === 'en' ? en : es;
-
-    const changeLog = (e) => {
-        //console.log(e.target.value);
-        router.push(router.pathname, router.pathname, {
-            locale: e.target.value
-        })
-    }
-
-    useEffect(() => {
-        const handleShadow = () => {
-            if (window.scrollY >= 90) {
-                setShadow(true)
-            } else {
-                setShadow(false)
-            }
-        }
-        window.addEventListener('scroll', handleShadow)
-    }, [])
-    const menuRefEs = useRef();
-    useEffect(() => {
-        let handler = (e) => {
-            if (!menuRefEs.current.contains(e.target)) {
-                setOpen(false)
-                //console.log(menuRefEs.current)
-            }
-
-        }
-
-        document.addEventListener("mousedown", handler)
-    })
-
-
-
-    return (
-        <div className={shadow ? '  text-white mx-2 flex justify-center lg:justify-start items-center pb-32 lg:py-0 relative ease-out hover:text-[#09B594]' : 'text-[#002336] mx-2 flex justify-center lg:justify-start items-center pb-32 lg:py-0 relative ease-out hover:text-[#09B594]'}>
-            <div onClick={() => setOpen(!isOpen)} className='flex gap-2 items-center cursor-pointer group transition-all group-hover:text-[#09B594] hover:border-[#09B594]'>
-                <span className='flex group overflow-hidden uppercase group-hover:text-[#09B594]'>{t.navbar.lang}</span>
-                <TbLanguage size={30} />
-
-            </div>
-            <div ref={menuRefEs} className={isOpen ? 'flex flex-col justify-center m-auto mt-2 lg:m-2 w-12 py-2 uppercase text-sm bg-white rounded-lg shadow-2xl absolute left-0 right-0 lg:left-0 top-[2rem]'
-                : 'hidden ease-out'}>
-                <button
-                    value='es'
-                    onClick={changeLog}
-                    className=' uppercase block p-2 cursor-pointer text-[#089C7E] hover:bg-[#089C7E] hover:text-white ease-in duration-75'
-                >
-                    Es
-                </button>
-                <button
-                    value='en'
-                    onClick={changeLog}
-                    className=' uppercase block p-2 cursor-pointer text-[#089C7E] hover:bg-[#089C7E] hover:text-white ease-in duration-75'
-                >
-                    EN
-                </button>
-            </div>
-        </div>
-    );
-};
-
