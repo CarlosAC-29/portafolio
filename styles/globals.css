@@ -5,14 +5,14 @@
 
 
 html {
-  scroll-behavior: smooth;
-  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    scroll-behavior: smooth;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 
 @layer base {
   
   body {
-    @apply bg-[#ecf0f3] text-[#1f2937] tracking-wide font-myFont
+    @apply bg-[#ecf0f3] text-[#1f2937] font-myFont
   }
 
   p {

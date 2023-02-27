@@ -6,6 +6,7 @@ import DropDownCV from './DropdownCV';
 import { AiOutlineMail } from 'react-icons/ai';
 import { FaLinkedinIn, FaGithub, FaFileDownload } from 'react-icons/fa';
 import { BsFillPersonLinesFill } from 'react-icons/bs';
+import { motion } from "framer-motion"
 import en from '../lang/en.json'
 import es from '../lang/es.json'
 import { useRouter } from 'next/router';
@@ -41,7 +42,7 @@ export default function Main() {
     return (
         <div id='home' className='w-full flex items-center justify-center text-center py-[8rem] relative'>
             <div className='mt-2 font-myFont max-w-[1240px] w-full h-full mx-auto lg:flex gap-20 justify-center items-center px-10 '>
-                <div className='w-full text-center lg:text-left'>
+                <motion.div initial={{x:-200}} animate={{ x: 0 }}  className='w-full text-center lg:text-left'>
                     <p className='uppercase text-5xl font-bold tracking-widest text-[#09B594]'>{t.main.title}</p>
                     <h1 className='text-4xl py-4 text-gray-700'>{t.main.subtitle} <span className='text-[#00659C]'>Carlos</span></h1>
                     <p className='text-lg md:text-2xl py-4 text-gray-700'>{t.main.Intro}</p>
@@ -72,7 +73,7 @@ export default function Main() {
                     <div className='grid justify-center lg:justify-start items-center pb-32 lg:py-0 relative ease-out'>
                         <DropDownCV />
                     </div>
-                </div>
+                </motion.div>
                 <div className='w-full items-center relative'>                      
                     <div className='w-[95%] h-[90%] object-cover z-1 overflow-hidden rounded-xl'>
                         <Image src={imageMain} alt='Image of Carlos Caceres' />

@@ -8,7 +8,7 @@ import Proyects from '../components/Projects'
 import Contact from '../components/Contact'
 import PageFooter from '../components/Footer'
 import React, { useEffect, useState } from 'react'
-import ClimbingBoxLoader from "react-spinners/ClimbingBoxLoader";
+
 
 export default function Home() {
 
@@ -22,18 +22,6 @@ export default function Home() {
   }, [])
 
   return (
-    <div>
-      {loading ?
-        <div className='flex flex-col gap-24 justify-center items-center m-auto h-screen'>
-          <ClimbingBoxLoader
-            color='#09B594'
-            loading={loading}
-            size={30}
-            aria-label="Loading Spinner"
-            data-testid="loader"
-          />
-        </div>
-        :
         <div>
           <Head>
             <link rel="icon" type="image/png" sizes="32x32" href="/favicon/favicon-32x32.png" />
@@ -52,7 +40,5 @@ export default function Home() {
           <Contact />
           <PageFooter />
         </div>
-      }
-    </div>
   )
 }
