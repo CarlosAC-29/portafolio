@@ -22,7 +22,7 @@ export default function Main() {
 
     return (
         <div id='home' className='w-full flex items-center justify-center text-center py-[8rem] relative'>
-            <div className='mt-2 font-myFont max-w-[1240px] w-full h-full mx-auto lg:flex gap-20 justify-center items-center px-10 '>
+            <div className='mt-2 max-w-[1240px] w-full h-full mx-auto lg:flex gap-20 justify-center items-center px-10 '>
                 <motion.div
                     initial="hidden"
                     whileInView="visible"
@@ -33,10 +33,10 @@ export default function Main() {
                         visible: { opacity: 1, x: 0 },
                     }}
                     className='w-full text-center lg:text-left'>
-                    <p className='uppercase text-5xl font-bold tracking-widest text-[#09B594]'>{t.main.title}</p>
-                    <h1 className='text-4xl py-4 text-gray-700'>{t.main.subtitle} <span className='text-[#00659C]'>Carlos</span></h1>
+                    <p className='font-title uppercase text-5xl  tracking-widest text-[#09B594]'>{t.main.title}</p>
+                    <h1 className='font-sans text-4xl py-4 text-gray-700'>{t.main.subtitle} <span className='text-[#00659C]'>Carlos</span></h1>
                     <p className='text-lg md:text-2xl py-4 text-gray-700'>{t.main.Intro}</p>
-                    <h1 className='text-4xl py-10 font-semibold text-[#00659C]'>{t.main.message}</h1>
+                    <h1 className='font-sans text-4xl py-10  text-[#00659C]'>{t.main.message}</h1>
                     <div className='hidden lg:flex items-start justify-between max-w-[300px]'>
                         <Link href='https://www.linkedin.com/in/carlos-c%C3%A1ceres-836596137/'>
                             <div className='bg-white text-[#0077B6] rounded-full shadow-lg shadow-gray-400 p-5 cursor-pointer  hover:scale-x-105 hover:bg-[#0077B6] hover:text-white ease-in duration-200'>

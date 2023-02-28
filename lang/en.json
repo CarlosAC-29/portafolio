@@ -12,13 +12,13 @@
         "title": "EDUCATION",
         "carda1": {
             "title_card": "Systems Engineer",
-            "Institution": "Institution : Univerisdad del Valle, Cali, Colombia",
+            "Institution": "Univerisdad del Valle, Cali, Colombia",
             "time": "6th Semester"
         },
 
         "carda2": {
             "title_card": "Software Development Technician",
-            "Institution": "Institution : SENA, Cali, Colombia",
+            "Institution": "SENA, Cali, Colombia",
             "time": "ago.2016 - jul.2018"
         }
     },
@@ -26,6 +26,8 @@
         "title": "EXPERIENCE",
         "card1":{
             "charge":"WEBSITE ADMINISTRATOR",
+            "task":"Tasks",
+            "taksMessage": "Web site administration and maintenance.",
             "company":"Universidad del Valle",
             "date":"Inicio : sept. 2022 - actuality",
             "location":"Cali, Valle del Cauca, Colombia · Hybrid"

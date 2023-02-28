@@ -50,7 +50,7 @@ export default function Contact() {
     })
 
     const formSubmitted = () => {
-        // console.log(verified)
+        console.log(verified)
         if (verified == true) {
             if (t == 'en') {
                 Swal.fire({
@@ -78,7 +78,7 @@ export default function Contact() {
     return (
         <div id='contact' className='w-full lg:h-full'>
             <div className='max-w-[1300px] m-auto px-2 py-16 w-full'>
-                <motion.div className='w-full flex justify-center text-center gap-5 py-3 mb-10 rounded-lg bg-[#09B594]'
+                <motion.div className='w-full flex justify-center text-center gap-5 py-3 mb-10 bg-[#09B594]'
                     initial="hidden"
                     whileInView="visible"
                     viewport={{ once: true, amount: 0.5 }}
@@ -92,7 +92,7 @@ export default function Contact() {
                     <p className='font-myFont font-bold text-4xl md:text-5xl tracking-widest  text-[#002336] uppercase'>{t.contact.title}</p>
                 </motion.div>
                 <div className='grid lg:grid-cols-5 gap-8'>
-                    <motion.div className='col-span-3 lg:col-span-2 w-full bg-[#c8cdd0] shadow-xl shadow-gray-400 rounded-xl p-4'
+                    <motion.div className='col-span-3 lg:col-span-2 w-full bg-[#c8cdd0] shadow-xl shadow-gray-400  p-4'
                         initial="hidden"
                         whileInView="visible"
                         viewport={{ once: true, amount: 0.5 }}
@@ -122,7 +122,7 @@ export default function Contact() {
                         </div>
 
                     </motion.div>
-                    <motion.div className='col-span-3 w-full h-auto shadow-xl shadow-gray-400 rounded-xl lg:p-4 bg-[#d0d3d5]'
+                    <motion.div className='col-span-3 w-full h-auto shadow-xl shadow-gray-400  lg:p-4 bg-[#d0d3d5]'
                         initial="hidden"
                         whileInView="visible"
                         viewport={{ once: true, amount: 0.5 }}

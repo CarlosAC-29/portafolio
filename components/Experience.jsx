@@ -11,9 +11,9 @@ export default function Experience() {
     const { locale } = router;
     const t = locale === 'en' ? en : es;
     return (
-        <div id='experience' className=' w-full'>
-            <div className='max-w-[1300px] mx-auto px-2 mb-40'>
-                <motion.div className='w-full bg-[#002336] text-center py-3 mb-10 rounded-lg'
+        <div id='experience' className='  w-full'>
+            <div className='max-w-[1300px] mx-auto px-2 mb-20'>
+                <motion.div className='w-full  text-center py-3 mb-10 rounded-lg'
                     initial="hidden"
                     whileInView="visible"
                     viewport={{ once: true, amount: 0.5 }}
@@ -23,9 +23,9 @@ export default function Experience() {
                         visible: { opacity: 1, y: 0 },
                     }}
                 >
-                    <p className='font-myFont font-bold text-4xl tracking-widest uppercase text-[#09B594]'>{t.experience.title}</p>
+                    <p className='font-myFont font-bold text-[3rem] tracking-widest uppercase text-[#09B594]'>{t.experience.title}</p>
                 </motion.div>
-                <motion.div className=' flex justify-start items-center'
+                <motion.div className=' flex justify-center items-center'
                     initial="hidden"
                     whileInView="visible"
                     viewport={{ once: true, amount: 0.5 }}
@@ -37,6 +37,7 @@ export default function Experience() {
                 >
                     <Cardexp
                         charge={t.experience.card1.charge}
+                        tasks={t.experience.card1.taksMessage}
                         company={t.experience.card1.company}
                         date={t.experience.card1.date}
                         location={t.experience.card1.location}

@@ -5,10 +5,10 @@ module.exports = {
     "./components/**/*.{js,ts,jsx,tsx}"
   ],
   theme: {
-    extend: {},
-
-    fontFamily: {
-        myFont: "'Nunito', sans-serif"
+    extend: {
+        fontFamily: {
+            'title': ['Monoton', 'sans-serif'],
+        },
     },
 
     screens: {

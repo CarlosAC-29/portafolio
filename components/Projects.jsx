@@ -91,8 +91,8 @@ export default function Proyects() {
                 }}
             >
                 
-                <div className='w-[100%] bg-[#002336] text-center py-3 mb-10 rounded-lg'>
-                    <p className='font-myFont font-bold text-4xl tracking-widest uppercase text-[#09B594]'>{t.proyects.title}</p>
+                <div className='w-[100%] text-center py-3 mb-10 rounded-lg'>
+                    <p className='font-title lg:text-[5rem] xs:text-[3rem] tracking-widest uppercase text-[#3abca2]'>{t.proyects.title}</p>
                 </div>
             </motion.div>
 

@@ -25,7 +25,9 @@
     "experience":{
         "title": "EXPERIENCIA",
         "card1":{
-            "charge":"ADMINISTRADOR WEB",
+            "charge":"ADMINISTRADOR PÁGINA WEB",
+            "task":"Tareas",
+            "taksMessage": "Administración y mantenimiento de página web.",
             "company":"Universidad del Valle",
             "date":"Inicio : sept. 2022 - actualidad",
             "location":"Cali, Valle del Cauca, Colombia · Híbrido"
