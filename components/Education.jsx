@@ -60,7 +60,7 @@ export default function Education() {
                                     viewport={{ once: true, amount: 0.5 }}
                                     transition={{ duration: 0.5 }}
                                     variants={{
-                                        hidden: { opacity: 0, x: 60 },
+                                        hidden: { opacity: 0, x: 40 },
                                         visible: { opacity: 1, x: 0 },
                                     }}
                                 >
