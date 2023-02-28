@@ -20,7 +20,7 @@ export default function Education() {
                     viewport={{ once: true, amount: 0.5 }}
                     transition={{ duration: 0.5 }}
                     variants={{
-                        hidden: { opacity: 0, y: -50 },
+                        hidden: { opacity: 0, y: -40 },
                         visible: { opacity: 1, y: 0 },
                     }}
                 >
@@ -29,19 +29,19 @@ export default function Education() {
 
                 <div className='flex justify-center items-center'>
 
-                    <ol class="relative md:left-[12%] border-l-2 border-[#09B594] dark:border-gray-700">
+                    <ol class="relative md:left-[12%] border-l-2 border-[#09B594] ">
                         <li
                             class="mb-10 ml-4 "
                         >
 
-                            <div class="absolute w-3 h-3 bg-[#09B594] rounded-full mt-1.5 -left-1.5 border border-[#002336] dark:border-gray-900 dark:bg-gray-700"></div>
+                            <div class="absolute w-3 h-3 bg-[#09B594] rounded-full mt-1.5 -left-1.5 border border-[#002336]"></div>
                             <motion.div
                                 initial="hidden"
                                 whileInView="visible"
                                 viewport={{ once: true, amount: 0.5 }}
                                 transition={{ duration: 0.5 }}
                                 variants={{
-                                    hidden: { opacity: 0, x: -60 },
+                                    hidden: { opacity: 0, x: -40 },
                                     visible: { opacity: 1, x: 0 },
                                 }}
                             >
@@ -52,7 +52,7 @@ export default function Education() {
                         </li>
                         <li class="mb-10 ml-4 ">
                             <div className='relative lg:right-80 lg:text-right'>
-                                <div class="relative top-5 w-3 h-3 bg-[#09B594] rounded-full mt-1.5 -left-[1.5rem] lg:left-[18.5rem] border border-[#002336] dark:border-gray-900 dark:bg-gray-700"></div>
+                                <div class="relative top-5 w-3 h-3 bg-[#09B594] rounded-full mt-1.5 -left-[1.5rem] lg:left-[18.5rem] border border-[#002336]"></div>
                                 <motion.div
                                     className='lg:relative right-10'
                                     initial="hidden"

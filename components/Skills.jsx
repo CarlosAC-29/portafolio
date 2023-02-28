@@ -30,7 +30,7 @@ export default function Skills() {
          viewport={{ once: true, amount: 0.5 }}
          transition={{ duration: 0.5 }}
          variants={{
-           hidden: { opacity: 0, x: -50 },
+           hidden: { opacity: 0, x: -40 },
            visible: { opacity: 1, x: 0 },
          }} 
         className='max-w-[1300px] mx-auto flex flex-col justify-center text-center'>

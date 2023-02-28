@@ -84,7 +84,7 @@ export default function Contact() {
                     viewport={{ once: true, amount: 0.5 }}
                     transition={{ duration: 0.5 }}
                     variants={{
-                        hidden: { opacity: 0, y: -50 },
+                        hidden: { opacity: 0, y: -40 },
                         visible: { opacity: 1, y: 0 },
                     }}
                 >
@@ -98,7 +98,7 @@ export default function Contact() {
                         viewport={{ once: true, amount: 0.5 }}
                         transition={{ duration: 0.7 }}
                         variants={{
-                            hidden: { opacity: 0, y: 60 },
+                            hidden: { opacity: 0, y: 40 },
                             visible: { opacity: 1, y: 0 },
                         }}>
                         <div className='lg:p-4 h-full'>
@@ -128,7 +128,7 @@ export default function Contact() {
                         viewport={{ once: true, amount: 0.5 }}
                         transition={{ duration: 0.7 }}
                         variants={{
-                            hidden: { opacity: 0, y: -60 },
+                            hidden: { opacity: 0, y: -40 },
                             visible: { opacity: 1, y: 0 },
                         }}
                     >
