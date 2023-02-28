@@ -4,7 +4,6 @@ import { useRouter } from "next/router"
 function Toggle() {
     const router = useRouter();
     const [toggle, setToggle] = useState('en');
-    console.log("asi inicio", toggle)
     const toggleClass = " transform translate-x";
     
 

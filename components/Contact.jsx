@@ -12,6 +12,7 @@ import Swal from 'sweetalert2';
 import en from '../lang/en.json'
 import es from '../lang/es.json'
 import { useRouter } from 'next/router';
+import { motion } from "framer-motion";
 
 
 export default function Contact() {
@@ -51,23 +52,23 @@ export default function Contact() {
     const formSubmitted = () => {
         // console.log(verified)
         if (verified == true) {
-            if(t == 'en') {
-            Swal.fire({
-                text: "I'll be in touch with you as soon as posible 👍",
-                icon: 'success',
-                iconColor: '#09B594',
-                confirmButtonColor: '#09B594',
-                confirmButtonText: 'ok'
-            })
-        }else{
-            Swal.fire({
-                text: "Me pondré en contacto con usted lo antes posible 👍",
-                icon: 'success',
-                iconColor: '#09B594',
-                confirmButtonColor: '#09B594',
-                confirmButtonText: 'ok'
-            })
-        }
+            if (t == 'en') {
+                Swal.fire({
+                    text: "I'll be in touch with you as soon as posible 👍",
+                    icon: 'success',
+                    iconColor: '#09B594',
+                    confirmButtonColor: '#09B594',
+                    confirmButtonText: 'ok'
+                })
+            } else {
+                Swal.fire({
+                    text: "Me pondré en contacto con usted lo antes posible 👍",
+                    icon: 'success',
+                    iconColor: '#09B594',
+                    confirmButtonColor: '#09B594',
+                    confirmButtonText: 'ok'
+                })
+            }
         }
         setVerified(false)
     }
@@ -77,12 +78,29 @@ export default function Contact() {
     return (
         <div id='contact' className='w-full lg:h-full'>
             <div className='max-w-[1240px] m-auto px-2 py-16 w-full'>
-                <div className='w-full flex justify-center text-center gap-5 py-3 mb-10 rounded-lg bg-[#09B594]'>
+                <motion.div className='w-full flex justify-center text-center gap-5 py-3 mb-10 rounded-lg bg-[#09B594]'
+                    initial="hidden"
+                    whileInView="visible"
+                    viewport={{ once: true, amount: 0.5 }}
+                    transition={{ duration: 0.5 }}
+                    variants={{
+                        hidden: { opacity: 0, y: -50 },
+                        visible: { opacity: 1, y: 0 },
+                    }}
+                >
 
                     <p className='font-myFont font-bold text-4xl md:text-5xl tracking-widest  text-[#002336] uppercase'>{t.contact.title}</p>
-                </div>
+                </motion.div>
                 <div className='grid lg:grid-cols-5 gap-8'>
-                    <div className='col-span-3 lg:col-span-2 w-full bg-[#c8cdd0] shadow-xl shadow-gray-400 rounded-xl p-4'>
+                    <motion.div className='col-span-3 lg:col-span-2 w-full bg-[#c8cdd0] shadow-xl shadow-gray-400 rounded-xl p-4'
+                        initial="hidden"
+                        whileInView="visible"
+                        viewport={{ once: true, amount: 0.5 }}
+                        transition={{ duration: 0.7 }}
+                        variants={{
+                            hidden: { opacity: 0, y: 60 },
+                            visible: { opacity: 1, y: 0 },
+                        }}>
                         <div className='lg:p-4 h-full'>
                             <div>
                                 <Image src={ContactImage} alt='Contact' />
@@ -103,8 +121,17 @@ export default function Contact() {
                             </div>
                         </div>
 
-                    </div>
-                    <div className='col-span-3 w-full h-auto shadow-xl shadow-gray-400 rounded-xl lg:p-4 bg-[#d0d3d5]'>
+                    </motion.div>
+                    <motion.div className='col-span-3 w-full h-auto shadow-xl shadow-gray-400 rounded-xl lg:p-4 bg-[#d0d3d5]'
+                        initial="hidden"
+                        whileInView="visible"
+                        viewport={{ once: true, amount: 0.5 }}
+                        transition={{ duration: 0.7 }}
+                        variants={{
+                            hidden: { opacity: 0, y: -60 },
+                            visible: { opacity: 1, y: 0 },
+                        }}
+                    >
                         <div className='p-4'>
 
                             <form onSubmit={formik.handleSubmit} >
@@ -179,13 +206,13 @@ export default function Contact() {
                                     onClick={() => formSubmitted()}
                                     className="w-full px-5 py-2.5 relative rounded-xl group overflow-hidden font-medium bg-[#09B594] text-[#002336] inline-block">
                                     <span className="absolute top-0 left-0 flex w-full h-0 mb-0 transition-all duration-200 ease-out transform translate-y-0 bg-[#002336] group-hover:h-full opacity-90"></span>
-                                    <span className="flex gap-3 justify-center relative group-hover:text-white uppercase font-bold"> {t.contact.sendMessage} <FiSend size={22}/> </span>
+                                    <span className="flex gap-3 justify-center relative group-hover:text-white uppercase font-bold"> {t.contact.sendMessage} <FiSend size={22} /> </span>
                                 </button>
 
                             </form>
 
                         </div>
-                    </div>
+                    </motion.div>
                 </div>
                 <div className='flex justify-center items-center py-12'>
                     <Link href='/'>

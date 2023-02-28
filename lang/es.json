@@ -12,13 +12,13 @@
         "title": "EDUCACIÓN",
         "carda1": {
             "title_card": "Ingeniería en sistemas",
-            "Institution": "Institución : Univerisdad del Valle, Cali, Colombia",
+            "Institution": "Univerisdad del Valle, Cali, Colombia",
             "time": "6to Semestre"
         },
 
         "carda2": {
-            "title_card": "Técnico de desarrollo de software",
-            "Institution": "Institución : SENA, Cali, Colombia",
+            "title_card": "Técnico en desarrollo de software",
+            "Institution": "SENA, Cali, Colombia",
             "time": "ago.2016 - jul.2018"
         }
     },

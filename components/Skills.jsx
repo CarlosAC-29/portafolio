@@ -15,6 +15,7 @@ import pyIcon from '../public/images/python.png'
 import en from '../lang/en.json'
 import es from '../lang/es.json'
 import {useRouter} from 'next/router';
+import { motion } from "framer-motion";
 
 
 export default function Skills() {
@@ -23,7 +24,16 @@ export default function Skills() {
 	const t = locale === 'en' ? en : es;
   return (
     <div id='skills' className='w-full p-2'>
-        <div className='max-w-[1240px] mx-auto flex flex-col justify-center text-center'>
+        <motion.div
+         initial="hidden"
+         whileInView="visible"
+         viewport={{ once: true, amount: 0.5 }}
+         transition={{ duration: 0.5 }}
+         variants={{
+           hidden: { opacity: 0, x: -50 },
+           visible: { opacity: 1, x: 0 },
+         }} 
+        className='max-w-[1300px] mx-auto flex flex-col justify-center text-center'>
             <div className='w-full bg-[#002336] text-center py-3 mb-10 rounded-lg'>
             <p className='font-myFont font-bold text-4xl tracking-widest uppercase text-[#09B594]'>{t.skills.title}</p>
             </div>
@@ -42,7 +52,7 @@ export default function Skills() {
                 <SkillsCard image={cIcon} title='C++'/>
                 <SkillsCard image={pyIcon} title='Python'/>
             </div>
-        </div>
+        </motion.div>
 
     </div>
   )
