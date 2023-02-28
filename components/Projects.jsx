@@ -65,7 +65,7 @@ const Project = ({ imageIcon, title, technologies, linkProject, linkGit }) => {
                     </div>
                 </div>
             </div>
-            <Image src={imageIcon} alt={title}/>
+            <Image src={imageIcon} alt={title} width={400} height={200}/>
         </motion.div>
     );
 };
