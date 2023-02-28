@@ -41,13 +41,13 @@ export default function Education() {
                                 viewport={{ once: true, amount: 0.5 }}
                                 transition={{ duration: 0.5 }}
                                 variants={{
-                                    hidden: { opacity: 0, x: -100 },
+                                    hidden: { opacity: 0, x: -60 },
                                     visible: { opacity: 1, x: 0 },
                                 }}
                             >
-                                <time class="mb-1 text-base font-normal leading-none text-gray-400 dark:text-gray-500">Ago.2016 - Jul.2018</time>
-                                <h3 class="text-xl font-semibold text-gray-900 dark:text-white">{t.education.carda2.title_card}</h3>
-                                <p class="mb-4 text-base font-normal text-gray-500 dark:text-gray-400">{t.education.carda2.Institution}</p>
+                                <time class="mb-1 text-base font-normal leading-none text-gray-400 ">Ago.2016 - Jul.2018</time>
+                                <h3 class="text-xl font-semibold text-gray-900 ">{t.education.carda2.title_card}</h3>
+                                <p class="mb-4 text-base font-normal text-gray-500">{t.education.carda2.Institution}</p>
                             </motion.div>
                         </li>
                         <li class="mb-10 ml-4 ">
@@ -60,13 +60,13 @@ export default function Education() {
                                     viewport={{ once: true, amount: 0.5 }}
                                     transition={{ duration: 0.5 }}
                                     variants={{
-                                        hidden: { opacity: 0, x: 100 },
+                                        hidden: { opacity: 0, x: 60 },
                                         visible: { opacity: 1, x: 0 },
                                     }}
                                 >
-                                    <time class="mb-1 text-base font-normal leading-none text-gray-400 dark:text-gray-500">{t.education.carda1.time}</time>
-                                    <h3 class="text-xl font-semibold text-gray-900 dark:text-white">{t.education.carda1.title_card}</h3>
-                                    <p class="text-base font-normal text-gray-500 dark:text-gray-400">{t.education.carda1.Institution}</p>
+                                    <time class="mb-1 text-base font-normal leading-none text-gray-400 ">{t.education.carda1.time}</time>
+                                    <h3 class="text-xl font-semibold text-gray-900 ">{t.education.carda1.title_card}</h3>
+                                    <p class="text-base font-normal text-gray-500 ">{t.education.carda1.Institution}</p>
                                 </motion.div>
                             </div>
                         </li>

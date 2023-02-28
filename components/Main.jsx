@@ -29,7 +29,7 @@ export default function Main() {
                     viewport={{ once: true, amount: 0.5 }}
                     transition={{ delay: 0.2, duration: 0.5 }}
                     variants={{
-                        hidden: { opacity: 0, x: -60 },
+                        hidden: { opacity: 0, x: -40 },
                         visible: { opacity: 1, x: 0 },
                     }}
                     className='w-full text-center lg:text-left'>
@@ -64,7 +64,7 @@ export default function Main() {
                 viewport={{ once: true, amount: 0.5 }}
                 transition={{ delay: 0.2, duration: 0.5 }}
                 variants={{
-                    hidden: { opacity: 0, y: 60 },
+                    hidden: { opacity: 0, y: 40 },
                     visible: { opacity: 1, y: 0 },
                 }}
                 className='w-full items-center relative'>
