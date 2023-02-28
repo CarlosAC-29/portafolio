@@ -80,7 +80,7 @@ export default function Proyects() {
             {/* HEADINGS */}
             
             <motion.div
-                className='max-w-[1300px] flex justify-center mx-auto'
+                className='max-w-[1300px] flex justify-center mx-auto px-1'
                 initial="hidden"
                 whileInView="visible"
                 viewport={{ once: true, amount: 0.5 }}
@@ -91,7 +91,7 @@ export default function Proyects() {
                 }}
             >
                 
-                <div className='w-full bg-[#002336] text-center py-3 mb-10 rounded-lg'>
+                <div className='w-[100%] bg-[#002336] text-center py-3 mb-10 rounded-lg'>
                     <p className='font-myFont font-bold text-4xl tracking-widest uppercase text-[#09B594]'>{t.proyects.title}</p>
                 </div>
             </motion.div>
@@ -99,7 +99,7 @@ export default function Proyects() {
             {/* PROJECTS */}
             <div className="flex justify-center">
                 <motion.div
-                    className="max-w-[1300px] grid lg:grid-cols-3 grid-flow-row gap-2"
+                    className="max-w-[1300px] grid lg:grid-cols-3 grid-flow-row gap-2 p-10"
                     variants={container}
                     initial="hidden"
                     whileInView="visible"

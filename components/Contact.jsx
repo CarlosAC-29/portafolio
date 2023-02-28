@@ -77,7 +77,7 @@ export default function Contact() {
 
     return (
         <div id='contact' className='w-full lg:h-full'>
-            <div className='max-w-[1240px] m-auto px-2 py-16 w-full'>
+            <div className='max-w-[1300px] m-auto px-2 py-16 w-full'>
                 <motion.div className='w-full flex justify-center text-center gap-5 py-3 mb-10 rounded-lg bg-[#09B594]'
                     initial="hidden"
                     whileInView="visible"
