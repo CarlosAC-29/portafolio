@@ -13,7 +13,7 @@ import en from '../lang/en.json'
 import es from '../lang/es.json'
 import { useRouter } from 'next/router';
 import { motion } from "framer-motion";
-
+import contactImg from '../public/images/contactImg.png'
 
 export default function Contact() {
     const router = useRouter();
@@ -101,19 +101,19 @@ export default function Contact() {
                             hidden: { opacity: 0, y: 40 },
                             visible: { opacity: 1, y: 0 },
                         }}>
-                        <div className='lg:p-4 h-full'>
+                        <div className='lg:p-4 h-full flex flex-col justify-center items-center'>
                             <div>
-                                <Image src={ContactImage} alt='Contact' />
+                                <Image src={contactImg} alt='Contact' />
                             </div>
-                            <div>
+                            <div className='text-center'>
                                 <h2 className='py-1 font-myFont font-bold text-4xl text-[#002336]'>Carlos Cáceres</h2>
                                 <p className='font-myFont text-lg font-semibold text-[#0077B6]'>{t.contact.charge}</p>
                                 <p className='font-myFont py-4 font-medium text-xl'>{t.contact.description}</p>
                             </div>
-                            <div>
+                            <div className='text-center'>
                                 <p className='font-myFont text-lg font-semibold text-[#0077B6] pb-4'>{t.contact.connect}</p>
                                 <div className='flex items-start justify-between max-w-[300px]'>
-                                    <div className='flex text-center gap-4'>
+                                    <div className='flex justify-center items-center text-center gap-4'>
                                         <AiOutlineMail size={28} color='#0077B6' />
                                         <a className='group-hover:text-cyan-500 hover:underline' href="mailto:carlosmicro33@gmail.com">carlosmicro33@gmail.com</a>
                                     </div>
