@@ -60,7 +60,7 @@
     "navbar": {
         "home":"home",
         "contact":"contact me",
-        "lang":"lang"
+        "lang":"Idiom : "
     },
     "error": {
         "requiered":"*Required"
