@@ -39,14 +39,18 @@ export default function Main() {
                     <h1 className='font-sans text-4xl py-10  text-[#00659C]'>{t.main.message}</h1>
                     <div className='hidden lg:flex items-start justify-between max-w-[300px]'>
                         <Link href='https://www.linkedin.com/in/carlos-c%C3%A1ceres-836596137/'>
-                            <div className='bg-white text-[#0077B6] rounded-full shadow-lg shadow-gray-400 p-5 cursor-pointer  hover:scale-x-105 hover:bg-[#0077B6] hover:text-white ease-in duration-200'>
-                                <FaLinkedinIn size={20} />
-                            </div>
+                            <a target="_blank">
+                                <div className='bg-white text-[#0077B6] rounded-full shadow-lg shadow-gray-400 p-5 cursor-pointer  hover:scale-x-105 hover:bg-[#0077B6] hover:text-white ease-in duration-200'>
+                                    <FaLinkedinIn size={20} />
+                                </div>
+                            </a>
                         </Link>
                         <Link href='https://github.com/CarlosAC-29'>
-                            <div className='bg-white text-[#0077B6] rounded-full shadow-lg shadow-gray-400 p-5 cursor-pointer  hover:scale-x-105 hover:bg-[#0077B6] hover:text-white ease-in duration-200'>
-                                <FaGithub size={20} />
-                            </div>
+                            <a target="_blank">
+                                <div className='bg-white text-[#0077B6] rounded-full shadow-lg shadow-gray-400 p-5 cursor-pointer  hover:scale-x-105 hover:bg-[#0077B6] hover:text-white ease-in duration-200'>
+                                    <FaGithub size={20} />
+                                </div>
+                            </a>
                         </Link>
                         <a href="mailto:carlosmicro33@gmail.com">
                             <div className='bg-white text-[#0077B6] rounded-full shadow-lg shadow-gray-400 p-5 cursor-pointer  hover:scale-x-105 hover:bg-[#0077B6] hover:text-white ease-in duration-200'>
@@ -58,16 +62,16 @@ export default function Main() {
                         <DropDownCV />
                     </div>
                 </motion.div>
-                <motion.div 
-                initial="hidden"
-                whileInView="visible"
-                viewport={{ once: true, amount: 0.5 }}
-                transition={{ delay: 0.2, duration: 0.5 }}
-                variants={{
-                    hidden: { opacity: 0, y: 40 },
-                    visible: { opacity: 1, y: 0 },
-                }}
-                className='w-full items-center relative'>
+                <motion.div
+                    initial="hidden"
+                    whileInView="visible"
+                    viewport={{ once: true, amount: 0.5 }}
+                    transition={{ delay: 0.2, duration: 0.5 }}
+                    variants={{
+                        hidden: { opacity: 0, y: 40 },
+                        visible: { opacity: 1, y: 0 },
+                    }}
+                    className='w-full items-center relative'>
                     <div className='w-[95%] h-[90%] object-cover z-1 overflow-hidden rounded-xl'>
                         <Image src={imageMain} alt='Image of Carlos Caceres' />
                     </div>

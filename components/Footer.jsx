@@ -21,13 +21,13 @@ export default function Footer() {
                     <div className='flex gap-10 justify-center'>
 
                         <Link href='https://www.linkedin.com/in/carlos-c%C3%A1ceres-836596137/'>
-                            <a>
+                            <a target="_blank">
                                 <FaLinkedinIn size={30} color={'#fff'} className='cursor-pointer' />
                             </a>
                         </Link>
 
                         <Link href='https://github.com/CarlosAC-29'>
-                            <a>
+                            <a target="_blank">
                                 <FaGithub size={30} color={'#fff'} className='cursor-pointer' />
                             </a>
                         </Link>

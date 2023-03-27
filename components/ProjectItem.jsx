@@ -5,12 +5,12 @@ import { FaGithub } from 'react-icons/fa';
 import { AiFillEye } from 'react-icons/ai';
 import en from '../lang/en.json'
 import es from '../lang/es.json'
-import {useRouter} from 'next/router';
+import { useRouter } from 'next/router';
 
 export default function ProjectItem({ imageIcon, linkProject, title, technologies, linkGit }) {
   const router = useRouter();
-	const {locale} = router;
-	const t = locale === 'en' ? en : es;
+  const { locale } = router;
+  const t = locale === 'en' ? en : es;
 
 
   const tecUsed = (technologiesUsed) => {
@@ -34,10 +34,10 @@ export default function ProjectItem({ imageIcon, linkProject, title, technologie
           </div>
           <div className='flex gap-5'>
             <Link href={linkProject}>
-              <div className='flex justify-center items-center px-2 bg-white rounded-lg cursor-pointer transition-all ease-out duration-200 hover:scale-110'>
-                <AiFillEye size={28}/>
-              <p className='text-center p-3 rounded-lg bg-white text-gray-700 font-bold text-lg'>{t.proyects.buttonView}</p>
-              </div>
+                <div className='flex justify-center items-center px-2 bg-white rounded-lg cursor-pointer transition-all ease-out duration-200 hover:scale-110'>
+                  <AiFillEye size={28} />
+                  <p className='text-center p-3 rounded-lg bg-white text-gray-700 font-bold text-lg'>{t.proyects.buttonView}</p>
+                </div>
             </Link>
             <Link href={linkGit}>
               <div className='flex justify-center items-center px-2 bg-white rounded-lg cursor-pointer transition-all ease-out duration-200 hover:scale-110'>

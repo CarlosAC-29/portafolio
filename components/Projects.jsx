@@ -51,21 +51,25 @@ const Project = ({ imageIcon, title, technologies, linkProject, linkGit }) => {
                     </div>
                     <div className='flex gap-5'>
                         <Link href={linkProject}>
-                            <div className='flex justify-center items-center p-2 bg-white rounded-full cursor-pointer transition-all ease-out duration-200 hover:scale-110'>
-                                <AiFillEye size={28} />
+                            <a target="_blank">
+                                <div className='flex justify-center items-center p-2 bg-white rounded-full cursor-pointer transition-all ease-out duration-200 hover:scale-110'>
+                                    <AiFillEye size={28} />
 
-                            </div>
+                                </div>
+                            </a>
                         </Link>
                         <Link href={linkGit}>
-                            <div className='flex justify-center items-center p-2 bg-white rounded-full cursor-pointer transition-all ease-out duration-200 hover:scale-110'>
-                                <FaGithub size={28} />
+                            <a target="_blank">
+                                <div className='flex justify-center items-center p-2 bg-white rounded-full cursor-pointer transition-all ease-out duration-200 hover:scale-110'>
+                                    <FaGithub size={28} />
 
-                            </div>
+                                </div>
+                            </a>
                         </Link>
                     </div>
                 </div>
             </div>
-            <Image src={imageIcon} alt={title} width={400} height={200}/>
+            <Image src={imageIcon} alt={title} width={400} height={200} />
         </motion.div>
     );
 };
@@ -78,7 +82,7 @@ export default function Proyects() {
     return (
         <section id="projects" className=" my-32">
             {/* HEADINGS */}
-            
+
             <motion.div
                 className='max-w-[1300px] flex justify-center mx-auto px-1'
                 initial="hidden"
@@ -90,7 +94,7 @@ export default function Proyects() {
                     visible: { opacity: 1, y: 0 },
                 }}
             >
-                
+
                 <div className='w-[100%] text-center py-3 mb-10 rounded-lg'>
                     <p className='font-title lg:text-[5rem] xs:text-[3rem] tracking-widest uppercase text-[#3abca2]'>{t.proyects.title}</p>
                 </div>
@@ -127,8 +131,8 @@ export default function Proyects() {
                         technologies='PostgresSQL,Express,React,NodeJS'
                         linkProject='https://task-list-bay-eight.vercel.app/'
                         linkGit='https://github.com/CarlosAC-29/TaskList' />
-                    
-                        
+
+
 
                     {/* <Project title="Project 2" /> */}
 
