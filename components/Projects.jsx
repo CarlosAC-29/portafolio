@@ -2,6 +2,8 @@ import React from 'react'
 import MrLocksmith from '../public/images/MrLocksmith.jpg';
 import Mkaly from '../public/images/Mkaly.jpg';
 import TaskList from '../public/images/tasklist.jpg'
+import VinkgrSaga from '../public/images/VinkgrSaga.png'
+import Portafolio from '../public/images/portafolio.png'
 import ProjectItem from './ProjectItem';
 import { FaGithub } from 'react-icons/fa';
 import { AiFillEye } from 'react-icons/ai';
@@ -131,6 +133,20 @@ export default function Proyects() {
                         technologies='PostgresSQL,Express,React,NodeJS'
                         linkProject='https://task-list-bay-eight.vercel.app/'
                         linkGit='https://github.com/CarlosAC-29/TaskList' />
+
+                    <Project
+                        imageIcon={VinkgrSaga}
+                        title='Vikingr Saga'
+                        technologies='MERN stack, React Three Fiber'
+                        linkProject='https://vikingr-saga.vercel.app/'
+                        linkGit='https://github.com/camyj2010/Vikingr-Saga' />
+
+                    <Project
+                        imageIcon={Portafolio}
+                        title='Portafolio'
+                        technologies='NextJs'
+                        linkProject='https://carloscacerescampo.vercel.app/'
+                        linkGit='https://github.com/CarlosAC-29/portafolio' />
 
 
 

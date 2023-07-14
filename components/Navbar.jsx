@@ -12,6 +12,8 @@ import es from '../lang/es.json'
 export default function Navbar() {
     const [nav, setNav] = useState(false);
     const [shadow, setShadow] = useState(false);
+    const [activeLink, setActiveLink] = useState('#home')
+    console.log(activeLink)
     const router = useRouter();
     const { locale } = router;
     const t = locale === 'en' ? en : es;
@@ -31,6 +33,7 @@ export default function Navbar() {
         e.preventDefault()
         const target = e.target.getAttribute('href')
         const location = document.querySelector(target).offsetTop
+        setActiveLink(target)
 
         window.scrollTo({
             left: 0,
@@ -57,22 +60,22 @@ export default function Navbar() {
 
                         < div className='flex justify-center items-center'>
 
-                            <a className='uppercase mx-[42px] hover:text-[#09B594]' href='#home' onClick={handleClick}>
+                            <a className={activeLink == '#home' ? 'uppercase mx-[42px] hover:text-[#09B594] text-[#09B594]' : 'uppercase mx-[42px] hover:text-[#09B594] '} href='#home' onClick={handleClick}>
                                 {t.navbar.home}
                             </a>
-                            <a className='uppercase mx-[42px] hover:text-[#09B594]' href='#education' onClick={handleClick}>
+                            <a className={activeLink == '#education' ? 'uppercase mx-[42px] hover:text-[#09B594] text-[#09B594]' : 'uppercase mx-[42px] hover:text-[#09B594] '} href='#education' onClick={handleClick}>
                                 {t.education.title}
                             </a>
-                            <a className='uppercase mx-[42px] hover:text-[#09B594]' href='#experience' onClick={handleClick}>
+                            <a className={activeLink == '#experience' ? 'uppercase mx-[42px] hover:text-[#09B594] text-[#09B594]' : 'uppercase mx-[42px] hover:text-[#09B594] '} href='#experience' onClick={handleClick}>
                                 {t.experience.title}
                             </a>
-                            <a className='uppercase mx-[42px] hover:text-[#09B594]' href='#skills' onClick={handleClick}>
+                            <a className={activeLink == '#skills' ? 'uppercase mx-[42px] hover:text-[#09B594] text-[#09B594]' : 'uppercase mx-[42px] hover:text-[#09B594] '} href='#skills' onClick={handleClick}>
                                 {t.skills.title}
                             </a>
-                            <a className='uppercase mx-[42px] hover:text-[#09B594]' href='#projects' onClick={handleClick}>
+                            <a className={activeLink == '#projects' ? 'uppercase mx-[42px] hover:text-[#09B594] text-[#09B594]' : 'uppercase mx-[42px] hover:text-[#09B594] '} href='#projects' onClick={handleClick}>
                                 {t.proyects.title}
                             </a>
-                            <a className='uppercase mx-[42px] hover:text-[#09B594]' href='#contact' onClick={handleClick}>
+                            <a className={activeLink == '#contact' ? 'uppercase mx-[42px] hover:text-[#09B594] text-[#09B594]' : 'uppercase mx-[42px] hover:text-[#09B594] '} href='#contact' onClick={handleClick}>
                                 {t.navbar.contact}
                             </a>
 
