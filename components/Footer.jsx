@@ -37,7 +37,7 @@ export default function Footer() {
                     <p className='text-[#09B594] pb-1 text-[1.2rem]'>{t.footer.email}</p>
                     <div className='flex gap-2 justify-center'>
                         <AiOutlineMail size={25} color='#fff' />
-                        <a className='group-hover:text-cyan-500 text-white hover:underline' href="mailto:carlosmicro33@gmail.com">carlosmicro33@gmail.com</a>
+                        <a className='group-hover:text-cyan-500 text-white hover:underline' href="mailto:carlosandres0229@gmail.com">carlosandres0229@gmail.com</a>
                     </div>
                 </div>
                 {/* <div>

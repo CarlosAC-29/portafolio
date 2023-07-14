@@ -52,7 +52,7 @@ export default function Main() {
                                 </div>
                             </a>
                         </Link>
-                        <a href="mailto:carlosmicro33@gmail.com">
+                        <a href="mailto:carlosandres0229@gmail.com">
                             <div className='bg-white text-[#0077B6] rounded-full shadow-lg shadow-gray-400 p-5 cursor-pointer  hover:scale-x-105 hover:bg-[#0077B6] hover:text-white ease-in duration-200'>
                                 <AiOutlineMail size={20} />
                             </div>

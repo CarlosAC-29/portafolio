@@ -115,7 +115,7 @@ export default function Contact() {
                                 <div className='flex items-start justify-between max-w-[300px]'>
                                     <div className='flex justify-center items-center text-center gap-4'>
                                         <AiOutlineMail size={28} color='#0077B6' />
-                                        <a className='group-hover:text-cyan-500 hover:underline' href="mailto:carlosmicro33@gmail.com">carlosmicro33@gmail.com</a>
+                                        <a className='group-hover:text-cyan-500 hover:underline' href="mailto:carlosandres0229@gmail.com">carlosandres0229@gmail.com</a>
                                     </div>
                                 </div>
                             </div>
