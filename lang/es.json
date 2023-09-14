@@ -27,10 +27,18 @@
         "card1":{
             "charge":"ADMINISTRADOR PÁGINA WEB",
             "task":"Tareas",
-            "taksMessage": "Administración y mantenimiento de página web.",
+            "taksMessage": "Administración y mantenimiento de pagina web por medio tecnologías como HTML5, CSS, JavaScript y Joomla.",
             "company":"Universidad del Valle",
             "date":"Inicio : sept. 2022 - actualidad",
             "location":"Cali, Valle del Cauca, Colombia · Híbrido"
+        },
+        "card2":{
+            "charge":"FREELANCER - Desarrollador Web",
+            "task":"Tasks",
+            "taksMessage": "Encabecé el diseño, elaboración y lanzamiento de un sitio web adaptable y atractivo que transmitía la visión y metas de la compañía Mr. Lockmisth.",
+            "company":"Mr. locksmith",
+            "date":"Inicio : agos. 2022 - nov. 2022",
+            "location":"Utah, Estados Unidos · Remoto"
         }
     },
     "skills":{

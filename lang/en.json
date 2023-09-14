@@ -27,10 +27,18 @@
         "card1":{
             "charge":"WEBSITE ADMINISTRATOR",
             "task":"Tasks",
-            "taksMessage": "Web site administration and maintenance.",
+            "taksMessage": "Website administration and maintenance using technologies such as HTML5, CSS, JavaScript, and Joomla.",
             "company":"Universidad del Valle",
-            "date":"Inicio : sept. 2022 - actuality",
+            "date":"Start date : sept. 2022 - actuality",
             "location":"Cali, Valle del Cauca, Colombia · Hybrid"
+        },
+        "card2":{
+            "charge":"FREELANCER - WEB DEVELOPER",
+            "task":"Tasks",
+            "taksMessage": "I led the design, development and deployment of a responsive and engaging website that reflected the vision and goals of the Mr.losckmisth company.",
+            "company":"Mr. locksmith",
+            "date":"Start date : agust. 2022 - nov. 2022",
+            "location":"Utah, United States · Remote"
         }
     },
     "skills":{

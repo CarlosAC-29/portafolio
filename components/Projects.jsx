@@ -45,7 +45,7 @@ const Project = ({ imageIcon, title, technologies, linkProject, linkGit }) => {
         <motion.div variants={projectVariant} className="relative ">
             <div className={overlayStyles}>
                 <div className='flex flex-col justify-center items-center gap-2'>
-                    <h3 className='text-[1.6rem] text-white font-bold text-center'>{title}</h3>
+                    <p className='text-[1.6rem] text-white font-bold text-center'>{title}</p>
                     <div className='flex my-2'>
                         {arrTec.map((arrTec, index) => {
                             return <p key={index} className='p-1 mx-1 text-white bg-[#2ba88fdd] '>{arrTec}</p>
@@ -98,7 +98,7 @@ export default function Proyects() {
             >
 
                 <div className='w-[100%] text-center py-3 mb-10 rounded-lg'>
-                    <p className='font-title lg:text-[5rem] xs:text-[3rem] tracking-widest uppercase text-[#3abca2]'>{t.proyects.title}</p>
+                    <p className='font-title md:text-[5rem] text-[2.8rem] tracking-widest uppercase text-[#3abca2]'>{t.proyects.title}</p>
                 </div>
             </motion.div>
 

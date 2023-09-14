@@ -1,4 +1,5 @@
 import React from 'react'
+import Image from 'next/image';
 import Cardexp from './Cardexp'
 import univalle from '../public/images/univalle.jpg'
 import en from '../lang/en.json'
@@ -25,7 +26,7 @@ export default function Experience() {
                 >
                     <p className='font-myFont font-bold text-[3rem] tracking-widest uppercase text-[#09B594]'>{t.experience.title}</p>
                 </motion.div>
-                <motion.div className=' flex justify-center items-center'
+                <motion.div className=' flex flex-col md:flex-row justify-center items-center gap-10'
                     initial="hidden"
                     whileInView="visible"
                     viewport={{ once: true, amount: 0.5 }}
@@ -35,7 +36,7 @@ export default function Experience() {
                         visible: { opacity: 1 },
                     }}
                 >
-                    <Cardexp
+                    {/* <Cardexp
                         charge={t.experience.card1.charge}
                         tasks={t.experience.card1.taksMessage}
                         company={t.experience.card1.company}
@@ -43,6 +44,39 @@ export default function Experience() {
                         location={t.experience.card1.location}
                         logo={univalle}
                     />
+                    <Cardexp
+                        charge={t.experience.card2.charge}
+                        tasks={t.experience.card2.taksMessage}
+                        company={t.experience.card2.company}
+                        date={t.experience.card2.date}
+                        location={t.experience.card2.location}
+                        logo={univalle}
+                    /> */}
+
+                    <div class="p-[2em] w-[90%] md:w-[30%] h-[20em] m-12 bg-[#002336] rounded-xl hover:bg-gray-900 hover:scale-110 duration-700 ">
+                        {/* <figure class="w-10 h-10 p-2 bg-blue-800 rounded-md">
+                            <svg fill="#FFFFFF" height="24" width="24">
+                                <path d="M18.799 7.038c-.496-.535-.799-1.252-.799-2.038 0-1.656 1.344-3 3-3s3 1.344 3 3-1.344 3-3 3c-.146 0-.29-.01-.431-.031l-3.333 6.032c.475.53.764 1.231.764 1.999 0 1.656-1.344 3-3 3s-3-1.344-3-3c0-.583.167-1.127.455-1.587l-2.565-3.547c-.281.087-.58.134-.89.134l-.368-.022-3.355 6.069c.451.525.723 1.208.723 1.953 0 1.656-1.344 3-3 3s-3-1.344-3-3 1.344-3 3-3c.186 0 .367.017.543.049l3.298-5.967c-.52-.539-.841-1.273-.841-2.082 0-1.656 1.344-3 3-3s3 1.344 3 3c0 .617-.187 1.191-.507 1.669l2.527 3.495c.307-.106.637-.164.98-.164.164 0 .325.013.482.039l3.317-6.001zm-3.799 7.962c.552 0 1 .448 1 1s-.448 1-1 1-1-.448-1-1 .448-1 1-1zm-6-8c.552 0 1 .448 1 1s-.448 1-1 1-1-.448-1-1 .448-1 1-1z"></path>
+                            </svg>
+                        </figure> */}
+                        <h4 class="py-2 text-[#09B594] font-bold text-center">{t.experience.card2.charge}</h4>
+                        <h4 class="py-2 text-white text-center">{t.experience.card2.date}</h4>
+                        <p class="text-base leading-7 text-white font-semibold space-y-4 text-center">{t.experience.card2.location}</p>
+                        <p class="text-base leading-7 text-white font-semibold space-y-4 text-center">{t.experience.card2.company}</p>
+                        <p class=" max-w-md text-sm leading-7 text-slate-300 space-y-4 text-center">{t.experience.card2.taksMessage}</p>
+
+                    </div>
+
+                    <div class=" p-[2em] w-[90%] md:w-[30%] h-[20em] m-12 bg-[#002336] rounded-xl hover:bg-gray-900 hover:scale-110 duration-700 ">
+                        <h4 class="py-2 text-[#09B594] -white font-bold text-center">{t.experience.card1.charge}</h4>
+                        <h4 class="py-2 text-white text-center">{t.experience.card1.date}</h4>
+                        <p class="text-base leading-7 text-white font-semibold space-y-4 text-center">{t.experience.card1.location}</p>
+                        <p class="text-base leading-7 text-white font-semibold space-y-4 text-center">{t.experience.card1.company}</p>
+                        <p class="text-sm leading-7 text-slate-300 space-y-4 text-center">{t.experience.card1.taksMessage}</p>
+
+                    </div>
+
+
                 </motion.div>
 
             </div>
