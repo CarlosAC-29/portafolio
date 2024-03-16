@@ -13,7 +13,7 @@ export default function Education() {
     const t = locale === 'en' ? en : es;
     return (
         <div id='education' className='bg-[#002336] w-full'>
-            <div className='max-w-[1300px] mx-auto p-10 mb-20'>
+            <div className='max-w-[1300px] mx-auto p-10'>
                 <motion.div className='w-full text-center py-3 mb-10 '
                     initial="hidden"
                     whileInView="visible"

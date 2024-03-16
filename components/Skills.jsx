@@ -23,7 +23,7 @@ export default function Skills() {
     const { locale } = router;
     const t = locale === 'en' ? en : es;
     return (
-        <div id='skills' className='bg-[#002336] w-full p-10'>
+        <div id='skills' className='bg-[#002336] w-full pb-10'>
             <motion.div
                 initial="hidden"
                 whileInView="visible"

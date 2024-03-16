@@ -120,19 +120,19 @@ export default function Proyects() {
                         linkProject='https://mrlocksmithutah.com/'
                         linkGit='https://github.com/CarlosAC-29/Mr.Locksmith'
                     />
-                    <Project
+                    {/* <Project
                         imageIcon={Mkaly}
                         title='Mkaly'
                         technologies='NextJS ,DJango,Tailwind,MaterialUI'
                         linkProject='https://mkaly.vercel.app/'
-                        linkGit='https://github.com/andrew921as/Mkaly' />
+                        linkGit='https://github.com/andrew921as/Mkaly' /> */}
 
-                    <Project
+                    {/* <Project
                         imageIcon={TaskList}
                         title='Task list'
                         technologies='PostgresSQL,Express,React,NodeJS'
                         linkProject='https://task-list-bay-eight.vercel.app/'
-                        linkGit='https://github.com/CarlosAC-29/TaskList' />
+                        linkGit='https://github.com/CarlosAC-29/TaskList' /> */}
 
                     <Project
                         imageIcon={VinkgrSaga}

@@ -13,7 +13,7 @@
         "carda1": {
             "title_card": "Ingeniería en sistemas",
             "Institution": "Univerisdad del Valle, Cali, Colombia",
-            "time": "7mo Semestre"
+            "time": "8vo Semestre"
         },
 
         "carda2": {
@@ -27,18 +27,26 @@
         "card1":{
             "charge":"ADMINISTRADOR PÁGINA WEB",
             "task":"Tareas",
-            "taksMessage": "Administración y mantenimiento de pagina web por medio tecnologías como HTML5, CSS, JavaScript y Joomla.",
+            "taksMessage": "Como administrador de las páginas web de la Escuela de Ingeniería Eléctrica y Electrónica, me encargo del mantenimiento, diseño y desarrollo de nuevos módulos. Utilizo tecnologías como Figma, HTML5, Bootstrap, CSS, JavaScript y Joomla. Mi objetivo es mejorar la experiencia del usuario y mantener nuestras plataformas actualizadas y funcionando óptimamente. ",
             "company":"Universidad del Valle",
-            "date":"Inicio : sept. 2022 - actualidad",
+            "date":"2022 - actualidad",
             "location":"Cali, Valle del Cauca, Colombia · Híbrido"
         },
         "card2":{
             "charge":"FREELANCER - Desarrollador Web",
             "task":"Tasks",
-            "taksMessage": "Encabecé el diseño, elaboración y lanzamiento de un sitio web adaptable y atractivo que transmitía la visión y metas de la compañía Mr. Lockmisth.",
+            "taksMessage": "Encabecé el diseño, elaboración y lanzamiento de un sitio web adaptable y atractivo que transmitía la visión y metas de la compañía Mr. Lockmisth. Mis logros incluyeron potenciar la presencia digital de Mr. Locksmith y lograr un incremento en la afluencia de visitantes, una mejora en la captación de clientes potenciales, entre otros beneficios.",
             "company":"Mr. locksmith",
-            "date":"Inicio : agos. 2022 - nov. 2022",
+            "date":"2022 - 2022",
             "location":"Utah, Estados Unidos · Remoto"
+        },
+        "card3":{
+            "charge":"Practicante Universiario",
+            "task":"Copservir LTDA",
+            "taksMessage": "Desarrollé nuevos módulos para la plataforma manejada por los puntos de venta de Drogas La Rebaja, utilizando tecnologías como PHP, JavaScript, MySQL, Bootstrap y Git. Además, llevé a cabo labores de mantenimiento y resolución de tickets. Todo esto se ha llevado a cabo en el marco de la metodología ágil Scrum.",
+            "company":"Copservir LTDA",
+            "date":"2023 - 2024",
+            "location":"Cali, Valle del Cauca, Colombia · Híbrido"
         }
     },
     "skills":{
