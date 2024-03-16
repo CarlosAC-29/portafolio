@@ -27,17 +27,25 @@
         "card1":{
             "charge":"WEBSITE ADMINISTRATOR",
             "task":"Tasks",
-            "taksMessage": "Website administration and maintenance using technologies such as HTML5, CSS, JavaScript, and Joomla.",
+            "taksMessage": "As the website administrator of the School of Electrical and Electronic Engineering, I am in charge of the maintenance, design and development of new modules. I use technologies such as Figma, HTML5, Bootstrap, CSS, JavaScript and Joomla. My goal is to improve the user experience and keep our platforms updated and working optimally. ",
             "company":"Universidad del Valle",
-            "date":"Start date : sept. 2022 - actuality",
+            "date":"2022 - actuality",
             "location":"Cali, Valle del Cauca, Colombia · Hybrid"
         },
         "card2":{
             "charge":"FREELANCER - WEB DEVELOPER",
             "task":"Tasks",
-            "taksMessage": "I led the design, development and deployment of a responsive and engaging website that reflected the vision and goals of the Mr.losckmisth company.",
+            "taksMessage": "I spearheaded the design, development and launch of a responsive and attractive website that conveyed the vision and goals of Mr. Locksmith's company. My accomplishments included boosting Mr. Locksmith's digital presence and achieving an increase in visitor traffic, improved lead acquisition, among other benefits.",
             "company":"Mr. locksmith",
-            "date":"Start date : agust. 2022 - nov. 2022",
+            "date":"2022 - 2022",
+            "location":"Utah, United States · Remote"
+        },
+        "card3":{
+            "charge":"IT Intern",
+            "task":"Tasks",
+            "taksMessage": "I developed new modules for the platform managed by Drogas La Rebaja stores, using technologies such as PHP, JavaScript, MySQL, Bootstrap and Git. In addition, I carried out maintenance and ticket resolution tasks. All this was carried out within the framework of the agile Scrum methodology.",
+            "company":"Mr. locksmith",
+            "date":"2022 - 2022",
             "location":"Utah, United States · Remote"
         }
     },
