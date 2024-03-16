@@ -29,14 +29,14 @@ export default function Experience() {
                     <p className='font-myFont font-bold text-[3rem] tracking-widest uppercase text-[#09B594]'>{t.experience.title}</p>
                 </motion.div>
                 <motion.div className=' flex flex-grow flex-col md:flex-row justify-center items-center gap-0'
-                    initial="hidden"
-                    whileInView="visible"
-                    viewport={{ once: true, amount: 0.5 }}
-                    transition={{ duration: 0.5 }}
-                    variants={{
-                        hidden: { opacity: 0 },
-                        visible: { opacity: 1 },
-                    }}
+                    // initial="hidden"
+                    // whileInView="visible"
+                    // viewport={{ once: true, amount: 0.5 }}
+                    // transition={{ duration: 0.5 }}
+                    // variants={{
+                    //     hidden: { opacity: 0 },
+                    //     visible: { opacity: 1 },
+                    // }}
                 >
                     {/* <Cardexp
                         charge={t.experience.card1.charge}
