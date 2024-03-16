@@ -23,11 +23,10 @@ export default function Contact() {
     const [verified, setVerified] = useState(false)
 
     useEffect(() => {
-        formSubmitted(verified)
+        //formSubmitted(verified)
     }, [])
 
     const onSubmit = async (values, actions) => {
-        setVerified(true)
         // console.log(verified)
         // console.log(values)
         // console.log(actions)
@@ -35,6 +34,23 @@ export default function Contact() {
         emailjs.send('service_ifianwe', 'template_p48t27s', values, 'JuTCPJD8FaqSMXMVo').then(() => { });
         await new Promise((resolve) => setTimeout(resolve, 1000))
         actions.resetForm()
+        if (t == 'en') {
+            Swal.fire({
+                text: "I'll be in touch with you as soon as posible 👍",
+                icon: 'success',
+                iconColor: '#09B594',
+                confirmButtonColor: '#09B594',
+                confirmButtonText: 'ok'
+            })
+        } else {
+            Swal.fire({
+                text: "Me pondré en contacto con usted lo antes posible 👍",
+                icon: 'success',
+                iconColor: '#09B594',
+                confirmButtonColor: '#09B594',
+                confirmButtonText: 'ok'
+            })
+        }
     }
 
     const formik = useFormik({
@@ -49,29 +65,29 @@ export default function Contact() {
 
     })
 
-    const formSubmitted = () => {
-        console.log(verified)
-        if (verified == true) {
-            if (t == 'en') {
-                Swal.fire({
-                    text: "I'll be in touch with you as soon as posible 👍",
-                    icon: 'success',
-                    iconColor: '#09B594',
-                    confirmButtonColor: '#09B594',
-                    confirmButtonText: 'ok'
-                })
-            } else {
-                Swal.fire({
-                    text: "Me pondré en contacto con usted lo antes posible 👍",
-                    icon: 'success',
-                    iconColor: '#09B594',
-                    confirmButtonColor: '#09B594',
-                    confirmButtonText: 'ok'
-                })
-            }
-        }
-        setVerified(false)
-    }
+    // const formSubmitted = () => {
+    //     console.log(verified)
+    //     if (verified == true) {
+    //         if (t == 'en') {
+    //             Swal.fire({
+    //                 text: "I'll be in touch with you as soon as posible 👍",
+    //                 icon: 'success',
+    //                 iconColor: '#09B594',
+    //                 confirmButtonColor: '#09B594',
+    //                 confirmButtonText: 'ok'
+    //             })
+    //         } else {
+    //             Swal.fire({
+    //                 text: "Me pondré en contacto con usted lo antes posible 👍",
+    //                 icon: 'success',
+    //                 iconColor: '#09B594',
+    //                 confirmButtonColor: '#09B594',
+    //                 confirmButtonText: 'ok'
+    //             })
+    //         }
+    //     }
+    //     setVerified(false)
+    // }
 
 
 
@@ -203,7 +219,6 @@ export default function Contact() {
                                 </div>
                                 <button
                                     type='submit'
-                                    onClick={() => formSubmitted()}
                                     className="w-full px-5 py-2.5 relative rounded-xl group overflow-hidden font-medium bg-[#09B594] text-[#002336] inline-block">
                                     <span className="absolute top-0 left-0 flex w-full h-0 mb-0 transition-all duration-200 ease-out transform translate-y-0 bg-[#002336] group-hover:h-full opacity-90"></span>
                                     <span className="flex gap-3 justify-center relative group-hover:text-white uppercase font-bold"> {t.contact.sendMessage} <FiSend size={22} /> </span>
