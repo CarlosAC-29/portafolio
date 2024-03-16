@@ -24,7 +24,7 @@ export default function Contact() {
 
     useEffect(() => {
         formSubmitted(verified)
-    }, [verified, formSubmitted])
+    }, [])
 
     const onSubmit = async (values, actions) => {
         setVerified(true)
