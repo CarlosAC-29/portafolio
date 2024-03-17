@@ -4,6 +4,7 @@ import Mkaly from '../public/images/Mkaly.jpg';
 import TaskList from '../public/images/tasklist.jpg'
 import VinkgrSaga from '../public/images/VinkgrSaga.png'
 import Portafolio from '../public/images/portafolio.png'
+import RecipeMeUp from '../public/images/RecipeMeUp.png'
 import ProjectItem from './ProjectItem';
 import { FaGithub } from 'react-icons/fa';
 import { AiFillEye } from 'react-icons/ai';
@@ -147,6 +148,13 @@ export default function Proyects() {
                         technologies='NextJs'
                         linkProject='https://carloscacerescampo.vercel.app/'
                         linkGit='https://github.com/CarlosAC-29/portafolio' />
+
+                    <Project
+                        imageIcon={RecipeMeUp}
+                        title='RecipeMeUp'
+                        technologies='Angular'
+                        linkProject='https://recipe-me-up.vercel.app/'
+                        linkGit='https://github.com/CarlosAC-29/RecipeMeUp' />
 
 
 
