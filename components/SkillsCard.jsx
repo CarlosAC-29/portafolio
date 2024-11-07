@@ -7,9 +7,9 @@ export default function SkillsCard({image, title}) {
     <div className='grid grid-cols-1 md:grid-cols-2 gap-2 justify-center items-center'>
         <div className='m-auto'>
             <Image 
+            width={60}
+            height={60}
             src={image} 
-            width='55px' 
-            height='55px' 
             alt='/' 
             />
         </div>

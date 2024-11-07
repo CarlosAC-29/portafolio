@@ -10,8 +10,10 @@ import gitIcon from '../public/images/git.png';
 import postgresIcon from '../public/images/postgre.png';
 import javaIcon from '../public/images/java.png';
 import NextJsIcon from '../public/images/nextjs.png';
+import php from '../public/images/php.png';
 import cIcon from '../public/images/c-.png';
 import pyIcon from '../public/images/python.png'
+import mongodb from '../public/images/mongodb-logo.png'
 import en from '../lang/en.json'
 import es from '../lang/es.json'
 import { useRouter } from 'next/router';
@@ -45,11 +47,11 @@ export default function Skills() {
                     <SkillsCard image={ReactIcon} title='REACT' />
                     <SkillsCard image={NextJsIcon} title='NextJs' />
                     <SkillsCard image={NodeJSIcon} title='NODE' />
-                    <SkillsCard image={tailwindIcon} title='TAILWIND' />
+                    <SkillsCard image={php} title='php' />
                     <SkillsCard image={gitIcon} title='git' />
                     <SkillsCard image={postgresIcon} title='PostgreSQL' />
+                    <SkillsCard image={mongodb} title='Mongo DB' />
                     <SkillsCard image={javaIcon} title='JAVA' />
-                    <SkillsCard image={cIcon} title='C++' />
                     <SkillsCard image={pyIcon} title='Python' />
                 </div>
             </motion.div>

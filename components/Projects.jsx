@@ -3,6 +3,7 @@ import MrLocksmith from '../public/images/MrLocksmith.jpg';
 import Mkaly from '../public/images/Mkaly.jpg';
 import TaskList from '../public/images/tasklist.jpg'
 import VinkgrSaga from '../public/images/VinkgrSaga.png'
+import flywise from '../public/images/flywise.jpeg'
 import Portafolio from '../public/images/portafolio.png'
 import RecipeMeUp from '../public/images/RecipeMeUp.png'
 import ProjectItem from './ProjectItem';
@@ -115,11 +116,11 @@ export default function Proyects() {
                     {/* ROW 1 */}
 
                     <Project
-                        imageIcon={MrLocksmith}
-                        title="Mr. Locksmith"
-                        technologies='ReactJS,Sass'
-                        linkProject='https://mrlocksmithutah.com/'
-                        linkGit='https://github.com/CarlosAC-29/Mr.Locksmith'
+                        imageIcon={flywise}
+                        title="Flywise"
+                        technologies='Express, React'
+                        linkProject='https://flywise-opal.vercel.app'
+                        linkGit='https://github.com/josegabjimenez/FlyWise'
                     />
                     {/* <Project
                         imageIcon={Mkaly}

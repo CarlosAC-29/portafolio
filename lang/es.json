@@ -13,7 +13,7 @@
         "carda1": {
             "title_card": "Ingeniería en sistemas",
             "Institution": "Univerisdad del Valle, Cali, Colombia",
-            "time": "8vo Semestre"
+            "time": "9no Semestre"
         },
 
         "carda2": {
@@ -47,6 +47,14 @@
             "company":"Copservir LTDA",
             "date":"2023 - 2024",
             "location":"Cali, Valle del Cauca, Colombia · Remoto"
+        },
+        "card4":{
+            "charge":"Ingeniero de software",
+            "task":"Tareas",
+            "taksMessage": "En este rol, desarrollé proyectos utilizando PHP y JavaScript, mantuve integraciones de API con servicios de terceros e implementé soluciones en la nube en Azure y AWS. Me enfoqué en mejorar el rendimiento del sistema agregando nuevas funcionalidades, utilicé MongoDB para administrar la capa de persistencia de los proyectos, empleé Git para el control de versiones y realicé un seguimiento de las tareas del proyecto en Jira. También aseguré flujos de trabajo fluidos y una resolución eficiente de problemas mientras trabajaba dentro de la metodología SCRUM.",
+            "company":"Dev.Pro",
+            "date":"2023 - actualidad",
+            "location":"North Carolina, Estados Unidos · Remoto"
         }
     },
     "skills":{

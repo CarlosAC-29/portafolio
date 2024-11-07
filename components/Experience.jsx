@@ -60,6 +60,12 @@ export default function Experience() {
 
                     <div className="p-[2em] w-[90%] md:w-[60%] ml-8 my-12 bg-[#002336] rounded-xl ">
                         <div className='mb-10'>
+                            <h4 className="py-2 text-[#09B594] -white font-bold">{t.experience.card4.charge} || <span>{t.experience.card4.date}</span></h4>
+                            <p className="text-base leading-7 text-white font-semibold space-y-4">{t.experience.card4.location}</p>
+                            <p className="text-base leading-7 text-white font-semibold space-y-4">{t.experience.card4.company}</p>
+                            <p className="text-sm leading-7 text-slate-300 space-y-4">{t.experience.card4.taksMessage}</p>
+                        </div>
+                        <div className='mb-10'>
                             <h4 className="py-2 text-[#09B594] -white font-bold">{t.experience.card3.charge} || <span>{t.experience.card3.date}</span></h4>
                             <p className="text-base leading-7 text-white font-semibold space-y-4">{t.experience.card3.location}</p>
                             <p className="text-base leading-7 text-white font-semibold space-y-4">{t.experience.card3.company}</p>

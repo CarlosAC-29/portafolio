@@ -13,7 +13,7 @@
         "carda1": {
             "title_card": "Systems Engineer",
             "Institution": "Univerisdad del Valle, Cali, Colombia",
-            "time": "8th Semester"
+            "time": "9th Semester"
         },
 
         "carda2": {
@@ -25,7 +25,7 @@
     "experience":{
         "title": "EXPERIENCE",
         "card1":{
-            "charge":"WEBSITE ADMINISTRATOR",
+            "charge":"Website Administrator",
             "task":"Tasks",
             "taksMessage": "As the website administrator of the School of Electrical and Electronic Engineering, I am in charge of the maintenance, design and development of new modules. I use technologies such as Figma, HTML5, Bootstrap, CSS, JavaScript and Joomla. My goal is to improve the user experience and keep our platforms updated and working optimally. ",
             "company":"Universidad del Valle",
@@ -33,7 +33,7 @@
             "location":"Cali, Valle del Cauca, Colombia · Hybrid"
         },
         "card2":{
-            "charge":"FREELANCER - WEB DEVELOPER",
+            "charge":"Freelancer - Web Developer",
             "task":"Tasks",
             "taksMessage": "I spearheaded the design, development and launch of a responsive and attractive website that conveyed the vision and goals of Mr. Locksmith's company. My accomplishments included boosting Mr. Locksmith's digital presence and achieving an increase in visitor traffic, improved lead acquisition, among other benefits.",
             "company":"Mr. locksmith",
@@ -44,9 +44,17 @@
             "charge":"IT Intern",
             "task":"Tasks",
             "taksMessage": "I developed new modules for the platform managed by Drogas La Rebaja stores, using technologies such as PHP, JavaScript, MySQL, Bootstrap and Git. In addition, I carried out maintenance and ticket resolution tasks. All this was carried out within the framework of the agile Scrum methodology.",
-            "company":"Mr. locksmith",
+            "company":"Copservir LTDA",
             "date":"2022 - 2022",
-            "location":"Utah, United States · Remote"
+            "location":"Cali, Valle del Cauca, Colombia · Hybrid"
+        },
+        "card4":{
+            "charge":"Software Engineer",
+            "task":"Tasks",
+            "taksMessage": "In this role, I developed projects using PHP and JavaScript, maintained API integrations with third-party services, and implemented cloud solutions on Azure and AWS. I focused on enhancing system performance by adding new features, utilized MongoDB for managing the persistence layer of projects, employed Git for version control, and tracked project tasks in Jira. I also ensured smooth workflows and efficient issue resolution while working within the SCRUM methodology.",
+            "company":"Dev.Pro",
+            "date":"2023 - actuality",
+            "location":"North Carolina, United States · Remote"
         }
     },
     "skills":{
