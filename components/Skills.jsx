@@ -5,14 +5,11 @@ import CssIcon from '../public/images/css.png'
 import JavaScriptIcon from '../public/images/javascript.png';
 import ReactIcon from '../public/images/react.png';
 import NodeJSIcon from '../public/images/node.png';
-import tailwindIcon from '../public/images/tailwind.png';
-import dotNetIcon from '../public/images/dotnet.png';
 import gitIcon from '../public/images/git.png';
 import postgresIcon from '../public/images/postgre.png';
 import javaIcon from '../public/images/java.png';
 import NextJsIcon from '../public/images/nextjs.png';
 import php from '../public/images/php.png';
-import cIcon from '../public/images/c-.png';
 import pyIcon from '../public/images/python.png'
 import mongodb from '../public/images/mongodb-logo.png'
 import en from '../lang/en.json'
@@ -53,7 +50,6 @@ export default function Skills() {
                     <SkillsCard image={postgresIcon} title='PostgreSQL' />
                     <SkillsCard image={mongodb} title='Mongo DB' />
                     <SkillsCard image={javaIcon} title='JAVA' />
-                    <SkillsCard image={dotNetIcon} title='dotNET' />
                     <SkillsCard image={pyIcon} title='Python' />
                 </div>
             </motion.div>
