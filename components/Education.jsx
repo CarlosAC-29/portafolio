@@ -50,8 +50,6 @@ export default function Education() {
                                     visible: { opacity: 1, x: 0 },
                                 }}
                             >
-
-                                <time className="mb-1 text-base font-normal leading-none text-[#ecf0f3] ">Ago.2016 - Jul.2018</time>
                                 <h3 className="text-xl font-semibold text-white ">{t.education.carda2.title_card}</h3>
                                 <p className="mb-4 text-base font-normal text-[#ecf0f3]">{t.education.carda2.Institution}</p>
                             </motion.div>
@@ -74,7 +72,6 @@ export default function Education() {
                                         visible: { opacity: 1, x: 0 },
                                     }}
                                 >
-                                    <time className="mb-1 text-base font-normal leading-none text-[#ecf0f3] ">{t.education.carda1.time}</time>
                                     <h3 className="text-xl font-semibold text-white ">{t.education.carda1.title_card}</h3>
                                     <p className="text-base font-normal text-[#ecf0f3] ">{t.education.carda1.Institution}</p>
                                 </motion.div>

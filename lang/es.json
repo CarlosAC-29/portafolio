@@ -2,7 +2,7 @@
     "main": {
         "title": "Hola mundo",
         "subtitle": "Mi nombre es",
-        "Intro": "Soy un desarrollador de software radicado en Cali, Colombia🌎, apasionado por el desarrollo de nuevas tecnologías que puedan mejorar el día a día de las personas. En este momento, soy estudiante de ingeniería de sistemas en la Universidad del Valle.",
+        "Intro": "Soy un desarrollador de software radicado en Cali, Colombia 🌎, apasionado por el desarrollo de nuevas tecnologías que puedan mejorar el día a día de las personas. Soy egresado de Ingeniería de Sistemas de la Universidad del Valle.",
         "message": "Desarrollador de software freelancer",
         "button_cv": " Hoja de vida",
         "OptionEn":"Inglés",
@@ -12,28 +12,26 @@
         "title": "EDUCACIÓN",
         "carda1": {
             "title_card": "Ingeniería en sistemas",
-            "Institution": "Univerisdad del Valle, Cali, Colombia",
-            "time": "9no Semestre"
+            "Institution": "Univerisdad del Valle, Cali, Colombia"
         },
 
         "carda2": {
             "title_card": "Técnico en desarrollo de software",
-            "Institution": "SENA, Cali, Colombia",
-            "time": "ago.2016 - jul.2018"
+            "Institution": "SENA, Cali, Colombia"
         }
     },
     "experience":{
         "title": "EXPERIENCIA",
         "card1":{
-            "charge":"ADMINISTRADOR PÁGINA WEB",
+            "charge":"Administrador de páginas web",
             "task":"Tareas",
             "taksMessage": "Como administrador de las páginas web de la Escuela de Ingeniería Eléctrica y Electrónica, me encargo del mantenimiento, diseño y desarrollo de nuevos módulos. Utilizo tecnologías como Figma, HTML5, Bootstrap, CSS, JavaScript y Joomla. Mi objetivo es mejorar la experiencia del usuario y mantener nuestras plataformas actualizadas y funcionando óptimamente. ",
             "company":"Universidad del Valle",
-            "date":"2022 - actualidad",
+            "date":"2022 - 2023",
             "location":"Cali, Valle del Cauca, Colombia · Híbrido"
         },
         "card2":{
-            "charge":"FREELANCER - Desarrollador Web",
+            "charge":"Freelancer - Desarrollador Web",
             "task":"Tasks",
             "taksMessage": "Encabecé el diseño, elaboración y lanzamiento de un sitio web adaptable y atractivo que transmitía la visión y metas de la compañía Mr. Lockmisth. Mis logros incluyeron potenciar la presencia digital de Mr. Locksmith y lograr un incremento en la afluencia de visitantes, una mejora en la captación de clientes potenciales, entre otros beneficios.",
             "company":"Mr. locksmith",
@@ -51,10 +49,10 @@
         "card4":{
             "charge":"Ingeniero de software",
             "task":"Tareas",
-            "taksMessage": "En este rol, desarrollé proyectos utilizando PHP y JavaScript, mantuve integraciones de API con servicios de terceros e implementé soluciones en la nube en Azure y AWS. Me enfoqué en mejorar el rendimiento del sistema agregando nuevas funcionalidades, utilicé MongoDB para administrar la capa de persistencia de los proyectos, empleé Git para el control de versiones y realicé un seguimiento de las tareas del proyecto en Jira. También aseguré flujos de trabajo fluidos y una resolución eficiente de problemas mientras trabajaba dentro de la metodología SCRUM.",
+            "taksMessage": "En este rol me encargo de desarrollar y mantener integraciones con APIs y servicios de terceros utilizando NodeJs, PHP, .NET, MongoDB y Oracle, además de implementar y administrar soluciones en la nube mediante Azure y AWS. También realizo actividades de monitoreo para asegurar el correcto funcionamiento de los sistemas y brindo soporte a los usuarios atendiendo y resolviendo los tickets que se generan. Asimismo, he trabajado siguiendo la metodología ágil Scrum, participando activamente en ceremonias y dinámicas del equipo.",
             "company":"Dev.Pro",
-            "date":"2023 - actualidad",
-            "location":"North Carolina, Estados Unidos · Remoto"
+            "date":"2024 - actualidad",
+            "location":"Carolina del norte, Estados Unidos · Remoto"
         }
     },
     "skills":{

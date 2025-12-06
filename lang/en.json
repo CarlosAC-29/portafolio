@@ -2,7 +2,7 @@
     "main": {
         "title": "HELLO WORLD",
         "subtitle": "My name is",
-        "Intro": "I'm a software developer based in Cali, Colombia🌎, who is passionate about developing new technologies that may improve people's day-to-day lives. At this time, I'm a system engineering student at the Universidad del Valle. ",
+        "Intro": "I'm a software developer based in Cali, Colombia 🌎, passionate about building technologies that can improve people's daily lives. I am a Systems Engineering graduate from Universidad del Valle.",
         "message": "A freelancer software developer",
         "button_cv": "Download CV",
         "OptionEn":"English",
@@ -12,14 +12,12 @@
         "title": "EDUCATION",
         "carda1": {
             "title_card": "Systems Engineer",
-            "Institution": "Univerisdad del Valle, Cali, Colombia",
-            "time": "9th Semester"
+            "Institution": "Univerisdad del Valle, Cali, Colombia"
         },
 
         "carda2": {
             "title_card": "Software Development Technician",
-            "Institution": "SENA, Cali, Colombia",
-            "time": "ago.2016 - jul.2018"
+            "Institution": "SENA, Cali, Colombia"
         }
     },
     "experience":{
@@ -29,7 +27,7 @@
             "task":"Tasks",
             "taksMessage": "As the website administrator of the School of Electrical and Electronic Engineering, I am in charge of the maintenance, design and development of new modules. I use technologies such as Figma, HTML5, Bootstrap, CSS, JavaScript and Joomla. My goal is to improve the user experience and keep our platforms updated and working optimally. ",
             "company":"Universidad del Valle",
-            "date":"2022 - actuality",
+            "date":"2022 - 2023",
             "location":"Cali, Valle del Cauca, Colombia · Hybrid"
         },
         "card2":{
@@ -51,7 +49,7 @@
         "card4":{
             "charge":"Software Engineer",
             "task":"Tasks",
-            "taksMessage": "In this role, I developed projects using PHP and JavaScript, maintained API integrations with third-party services, and implemented cloud solutions on Azure and AWS. I focused on enhancing system performance by adding new features, utilized MongoDB for managing the persistence layer of projects, employed Git for version control, and tracked project tasks in Jira. I also ensured smooth workflows and efficient issue resolution while working within the SCRUM methodology.",
+            "taksMessage": "In this role, I am responsible for developing and maintaining integrations with APIs and third-party services using NodeJs, PHP, .NET, MongoDB, and Oracle, as well as implementing and managing cloud solutions on Azure and AWS. I also perform monitoring activities to ensure the proper functioning of the systems and provide user support by addressing and resolving incoming tickets. Additionally, I have worked following the Scrum agile methodology, actively participating in team ceremonies and workflow",
             "company":"Dev.Pro",
             "date":"2023 - actuality",
             "location":"North Carolina, United States · Remote"
