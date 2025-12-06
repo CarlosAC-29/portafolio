@@ -53,7 +53,7 @@ export default function Skills() {
                     <SkillsCard image={postgresIcon} title='PostgreSQL' />
                     <SkillsCard image={mongodb} title='Mongo DB' />
                     <SkillsCard image={javaIcon} title='JAVA' />
-                    <SkillsCard image={dotNetIcon} title='.NET' />
+                    <SkillsCard image={dotNetIcon} title='dotNET' />
                     <SkillsCard image={pyIcon} title='Python' />
                 </div>
             </motion.div>
