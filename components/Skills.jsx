@@ -12,6 +12,7 @@ import NextJsIcon from '../public/images/nextjs.png';
 import php from '../public/images/php.png';
 import pyIcon from '../public/images/python.png'
 import mongodb from '../public/images/mongodb-logo.png'
+import dotNet from '../public/images/dotnet.png';
 import en from '../lang/en.json'
 import es from '../lang/es.json'
 import { useRouter } from 'next/router';
@@ -51,6 +52,7 @@ export default function Skills() {
                     <SkillsCard image={mongodb} title='Mongo DB' />
                     <SkillsCard image={javaIcon} title='JAVA' />
                     <SkillsCard image={pyIcon} title='Python' />
+                    <SkillsCard image={dotNet} title='.NET' />
                 </div>
             </motion.div>
 
