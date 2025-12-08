@@ -7,7 +7,11 @@ import es from '../lang/es.json'
 import { useRouter } from 'next/router';
 import { motion } from "framer-motion";
 import worker from '../public/images/worker.json'
-import Lottie from 'lottie-react';
+import dynamic from 'next/dynamic';
+
+const Lottie = dynamic(() => import('lottie-react'), {
+    ssr: false,
+});
 
 export default function Experience() {
     const router = useRouter();
