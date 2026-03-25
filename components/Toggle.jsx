@@ -14,14 +14,16 @@ function Toggle() {
     const toggleClass = " transform translate-x-5";
 
     const changeLogEs = (e) => {
-        router.push(router.pathname, router.pathname, {
-            locale: 'es'
+        router.push(router.asPath, router.asPath, {
+            locale: 'es',
+            scroll: false,
         })
     }
 
     const changeLogEn = (e) => {
-        router.push(router.pathname, router.pathname, {
-            locale: 'en'
+        router.push(router.asPath, router.asPath, {
+            locale: 'en',
+            scroll: false,
         })
     }
 
